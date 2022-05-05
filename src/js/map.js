@@ -23,36 +23,47 @@ map.on("load", function() {
     data: data,
   });
 
-map.addLayer({
-      'id': "classifica-custom",
-      'type': 'circle',
-      'source': 'classifica',
-      'layout': {
-          'visibility': 'visible',
-      },
-      'paint': {
-          'circle-radius': {
-              'base': 5,
-              'stops': [[12, 12], [22, 12]]
-          },
+  map.addLayer({
+  'id': 'circle',
+  'type': 'circle',
+  'source': 'classifica',
+  'paint': {
+    'circle-color': {
+        'property': 'VALUE',
+        'type': 'exponential',
+        'stops': [
+            [0, 'rgb(236,222,239)'],
+            [1, 'rgb(236,222,239)'],
+            [2, 'rgb(208,209,230)'],
+            [3, 'rgb(166,189,219)'],
+            [4, 'rgb(103,169,207)'],
+            [5, 'rgb(28,144,153)'],
+            [6, 'rgb(1,108,89)']
+          ]
+        },
+  'circle-radius': 8,
+  'circle-stroke-width': 2,
+  'circle-stroke-color': '#ffffff'
+    }
+  });
 
-          'circle-color': {
-            'property': 'VALUE',
-            'type': 'exponential',
-            'stops': [
-                [0, 'rgb(236,222,239)'],
-                [10, 'rgb(236,222,239)'],
-                [20, 'rgb(208,209,230)'],
-                [30, 'rgb(166,189,219)'],
-                [40, 'rgb(103,169,207)'],
-                [50, 'rgb(28,144,153)'],
-                [108, 'rgb(1,108,89)']
-              ]
-            },
-          'circle-stroke-color': 'white',
-          'circle-stroke-width': 1,
-          'circle-opacity': 0,
-          'circle-stroke-opacity': 0,
+  map.on('click', function(e) {
+    console.log(e.properties)
+
+    var features = map.queryRenderedFeatures([e.point.x, e.point.y ], {
+        layers: ["circle"]
+    });
+
+    if(features != null){
+        var feature = features[0];
+        var popup = new mapboxgl.Popup({ offset: [0, -15] })
+          .setLngLat(feature.geometry.coordinates)
+          .setHTML('<div id=\'popup\' class=\'popup\' style=\'z-index: 10;\'>' +
+                    '<ul>' +
+                     +
+                    '</ul></div>')
+          .setLngLat(feature.geometry.coordinates)
+          .addTo(map);
       }
   });
 
