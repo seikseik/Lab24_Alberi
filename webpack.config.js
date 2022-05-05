@@ -56,6 +56,10 @@ module.exports = {
         },
       },
       {
+        test: /\.(png|jpg)$/,
+        loader: 'url-loader'
+      },
+      {
         test: /\.(eot|ttf|woff|woff2)$/,
         type: 'asset',
         parser: {
@@ -134,14 +138,7 @@ module.exports = {
       filename: "index.html",
       template: path.resolve(environment.paths.source, "index.html"),
       favicon: path.resolve(environment.paths.source, 'images', 'favicon.ico'),
-    }),
-    new HTMLWebpackPlugin({
-      inject: true,
-      hash: false,
-      filename: "about/index.html",
-      template: path.resolve(environment.paths.source, "about/index.html"),
-      favicon: path.resolve(environment.paths.source, 'images', 'favicon.ico'),
-    }),
+    })
   ],
   // .concat(htmlPluginEntries),
   target: 'web',

@@ -1,6 +1,10 @@
 body{
   font-size: $size_text;
-  font-family: sans-serif;
+  font-family: "sans-regular";
+}
+
+strong{
+  font-family: "sans-medium"
 }
 
 .line{
@@ -38,9 +42,9 @@ body{
       font-size: $size_xsmall;
     }
     p{
-      font-style: italic;
+      font-family: "serif-regular-italic";
       & strong{
-        font-weight: bold;
+        font-family: "serif-xbold"
       }
     }
     img{
@@ -66,10 +70,12 @@ body{
   h2{
     font-size: $size_title;
     margin-bottom: $spacing*2;
+    font-family: "serif-xbold"
   }
   p{
     padding: $spacing 0;
     @include border_tb;
+    font-family: "serif-headline"
   }
 }
 
@@ -145,7 +151,7 @@ body{
   h4{
     text-transform: uppercase;
     @include gradient_text;
-    margin-bottom: $spacing/2;
+    font-family: "sans-medium";
   }
   p{
     color:#C5C5C5;
@@ -158,6 +164,11 @@ body{
     text-transform: uppercase;
     padding: $spacing*3 0;
     @include gradient_text;
+    font-family: "serif-headline";
+    line-height: 1.1;
+    &.last-quote{
+      font-size: 50px;
+    }
   }
 }
 
@@ -200,10 +211,83 @@ body{
     }
   }
 }
+#third_illu{
+  .illustration_container{
+    padding: $spacing 0;
+    img{
+      width: 85%;
+      margin-left: 10%;
+      margin-bottom: -10%;
+      max-width: unset;
+      height: auto;
+    }
+  }
+}
 
-.map{
+
+.map_section{
   height: 100vh;
-  width:100%;
-  background: lightgrey;
+  display: flex;
+  .col_left_map{
+    width: 33.33%;
+    background: white;
+    border-right:1px solid $green;
+    .col-container{
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+  }
+  .col_right_map{
+    width:66.66%;
+  }
+}
 
+.map_navigation{
+  width:40%;
+}
+.map_flyto{
+  width:60%;
+}
+
+
+
+.map_heading{
+  padding: $spacing;
+  display: flex;
+  img{margin-right: 10px;}
+  @include border_tb;
+  border-top: none;
+  h4{
+    @include gradient_text;
+    text-transform: uppercase;
+    font-size: $size_small;
+    font-family: "sans-medium"
+  }
+}
+.map_description{
+  padding: $spacing;
+  margin-top: $spacing*3;
+  font-size: 18px;
+  line-height: 1.4;
+}
+.map_info{
+  padding: $spacing;
+  font-size: 16px;
+  color: #C5C5C5;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  line-height: 1.4;
+}
+
+
+.credits{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $spacing*6 $spacing;
+  li{
+    margin-bottom: $spacing;
+  }
 }

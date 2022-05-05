@@ -1,0 +1,32 @@
+// sans
+@font-face {
+  font-family: 'sans-bold';
+  src:url('../fonts/Sole24SansNumber-Bold.otf') format('OpenType'); /* Opera, Safari */
+}
+@font-face {
+  font-family: 'sans-medium';
+  src:url('../fonts/Sole24SansNumber-Medium.otf') format('OpenType'); /* Opera, Safari */
+}
+@font-face {
+  font-family: 'sans-regular';
+  src:url('../fonts/Sole24SansNumber-Regular.otf') format('OpenType'); /* Opera, Safari */
+}
+
+// serif
+@font-face {
+  font-family: 'serif-xbold';
+  src:url('../fonts/soleserifdisplayextrablack-webfont.ttf') format('truetype'); /* Opera, Safari */
+}
+
+@font-face {
+  font-family: 'serif-regular';
+  src:url('../fonts/soleserifdisplayregular-webfont.ttf') format('truetype'); /* Opera, Safari */
+}
+@font-face {
+  font-family: 'serif-regular-italic';
+  src:url('../fonts/soleseriftextregularitalic-webfont.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'serif-headline';
+  src:url('../fonts/soleserifdisplayregular-webfont.ttf') format('truetype'); 
+}
