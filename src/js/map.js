@@ -48,7 +48,7 @@ map.on("load", function() {
   });
 
   map.on('click', function(e) {
-    console.log(e.properties)
+
 
     var features = map.queryRenderedFeatures([e.point.x, e.point.y ], {
         layers: ["circle"]
@@ -58,10 +58,7 @@ map.on("load", function() {
         var feature = features[0];
         var popup = new mapboxgl.Popup({ offset: [0, -15] })
           .setLngLat(feature.geometry.coordinates)
-          .setHTML('<div id=\'popup\' class=\'popup\' style=\'z-index: 10;\'>' +
-                    '<ul>' +
-                     +
-                    '</ul></div>')
+          .setHTML(feature.properties.TOOLTIP)
           .setLngLat(feature.geometry.coordinates)
           .addTo(map);
       }
