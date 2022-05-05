@@ -48,6 +48,7 @@
     "mini-css-extract-plugin": "^2.4.4",
     "postcss": "^8.3.11",
     "postcss-loader": "^6.2.0",
+    "mapbox-gl": "^2.8.1",
     "pug": "^3.0.2",
     "pug-loader": "^2.4.0",
     "sass": "^1.43.4",
@@ -88,7 +89,5 @@
     "deploy": "gh-pages -d dist"
   },
   "target": "web",
-  "dependencies": {
-    "gsap": "npm:@gsap/member@^3.10.2"
-  }
+  "dependencies": {}
 }

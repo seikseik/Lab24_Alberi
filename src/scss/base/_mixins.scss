@@ -35,3 +35,33 @@
     @return null;
   }
 }
+
+
+@mixin gradient{
+  background: linear-gradient(90.26deg, #07A76F -20.04%, #8ECA45 125.32%);
+}
+
+@mixin border_lr{
+  border-left: 1px solid $green;
+  border-right: 1px solid $green;
+}
+
+@mixin border_tb{
+  border-top: 1px solid $green;
+  border-bottom: 1px solid $green;
+}
+
+
+@mixin gradient_text {
+  background-color: black;
+
+  background: linear-gradient(90.26deg, #07A76F -20.04%, #8ECA45 125.32%);
+
+  background-size: 100%;
+  background-repeat: repeat;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
