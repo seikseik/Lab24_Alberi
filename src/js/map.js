@@ -5,11 +5,11 @@ import * as data from './dataset-verde-abitante.json';
 
 // first map
 var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/lucagorini/cl2t3c0k1000314npzj6k6lgj',
-    accessToken: 'pk.eyJ1IjoibHVjYWdvcmluaSIsImEiOiJja28yd2tzdjQxM3NqMnFwZ3BremZ2Y3hrIn0.TOK_D8r2LULbVb-3ULVf8Q',
-    center:[8.533621, 47.119] ,
-    zoom: 4
+  container: 'map',
+  style: 'mapbox://styles/lucagorini/cl2t3c0k1000314npzj6k6lgj',
+  accessToken: 'pk.eyJ1IjoibHVjYWdvcmluaSIsImEiOiJja28yd2tzdjQxM3NqMnFwZ3BremZ2Y3hrIn0.TOK_D8r2LULbVb-3ULVf8Q',
+  center: [8.533621, 47.119],
+  zoom: 3.3
 });
 
 map.scrollZoom.disable();
@@ -24,66 +24,144 @@ map.on("load", function() {
   });
 
   map.addLayer({
-  'id': 'circle',
-  'type': 'circle',
-  'source': 'classifica',
-  'paint': {
-    'circle-color': {
+    'id': 'circle',
+    'type': 'circle',
+    'source': 'classifica',
+    'paint': {
+      'circle-color': {
         'property': 'VALUE',
         'type': 'exponential',
         'stops': [
-            [0, 'rgb(236,222,239)'],
-            [1, 'rgb(236,222,239)'],
-            [2, 'rgb(208,209,230)'],
-            [3, 'rgb(166,189,219)'],
-            [4, 'rgb(103,169,207)'],
-            [5, 'rgb(28,144,153)'],
-            [6, 'rgb(1,108,89)']
-          ]
-        },
-  'circle-radius': 8,
-  'circle-stroke-width': 2,
-  'circle-stroke-color': '#ffffff'
+          [0, 'rgb(217, 128, 31)'],
+          [1, 'rgb(199, 134, 30)'],
+          [2, 'rgb(182, 140, 30)'],
+          [3, 'rgb(147, 153, 29)'],
+          [4, 'rgb(112, 166, 28)'],
+          [5, 'rgb(77, 179, 27)'],
+          [6, 'rgb(43, 192, 27)']
+        ]
+      },
+      'circle-radius': 6.5,
+      'circle-stroke-width': 1,
+      'circle-stroke-color': '#ffffff'
     }
-  });
+  }, "country-label");
 
   map.on('click', function(e) {
 
-
-    var features = map.queryRenderedFeatures([e.point.x, e.point.y ], {
-        layers: ["circle"]
+    var features = map.queryRenderedFeatures([e.point.x, e.point.y], {
+      layers: ["circle"]
     });
 
-    if(features != null){
-        var feature = features[0];
-        var popup = new mapboxgl.Popup({ offset: [0, -15] })
-          .setLngLat(feature.geometry.coordinates)
-          .setHTML(feature.properties.TOOLTIP)
-          .setLngLat(feature.geometry.coordinates)
-          .addTo(map);
-      }
+    if (features != null) {
+      var feature = features[0];
+      var popup = new mapboxgl.Popup({
+          offset: [0, -15]
+        })
+        .setLngLat(feature.geometry.coordinates)
+        .setHTML(feature.properties.TOOLTIP)
+        .setLngLat(feature.geometry.coordinates)
+        .addTo(map);
+    }
   });
 
 });
 
 
+
+// second map
+
 var map_due = new mapboxgl.Map({
-    container: 'map_second',
-    style: 'mapbox://styles/lucagorini/cl2t3c0k1000314npzj6k6lgj',
-    accessToken: 'pk.eyJ1IjoibHVjYWdvcmluaSIsImEiOiJja28yd2tzdjQxM3NqMnFwZ3BremZ2Y3hrIn0.TOK_D8r2LULbVb-3ULVf8Q',
-    center:[8.533621, 47.119] ,
-    zoom: 4
+  container: 'map_second',
+  style: 'mapbox://styles/lucagorini/cl2t3c0k1000314npzj6k6lgj',
+  accessToken: 'pk.eyJ1IjoibHVjYWdvcmluaSIsImEiOiJja28yd2tzdjQxM3NqMnFwZ3BremZ2Y3hrIn0.TOK_D8r2LULbVb-3ULVf8Q',
+  center: [9.17, 45.47],
+  zoom: 11.2
 });
 
 map_due.scrollZoom.disable();
 
+map_due.on('load', () => {
 
+  map_due.addSource('arborea', {
+    'type': 'raster',
+    'url': 'mapbox://lucagorini.8ln15ca6'
+  });
+
+  map_due.addSource('temperatura', {
+    'type': 'raster',
+    'url': 'mapbox://lucagorini.3eez86i1'
+  });
+
+
+  map_due.addLayer({
+    'id': 'temperatura_super',
+    'source': 'temperatura',
+    'type': 'raster'
+  },"country-label");
+  map_due.addLayer({
+    'id': 'copertura',
+    'source': 'arborea',
+    'type': 'raster'
+  }, "country-label");
+
+});
+
+map_due.on('idle', () => {
+  if (!map_due.getLayer('copertura') || !map_due.getLayer('temperatura_super')) {
+    return;
+  }
+  const toggleableLayerIds = ['temperatura_super', 'copertura'];
+
+  for (const id of toggleableLayerIds) {
+    if (document.getElementById(id)) {
+      continue;
+    }
+
+    const link = document.createElement('a');
+    link.id = id;
+    link.href = '#';
+    link.textContent = id;
+    link.className = 'active';
+
+    link.onclick = function(e) {
+      const clickedLayer = this.textContent;
+      e.preventDefault();
+      e.stopPropagation();
+
+      const visibility = map_due.getLayoutProperty(
+        clickedLayer,
+        'visibility'
+      );
+      if (visibility === 'visible') {
+        map_due.setLayoutProperty(clickedLayer, 'visibility', 'none');
+        this.className = '';
+      } else {
+        this.className = 'active';
+        map_due.setLayoutProperty(
+          clickedLayer,
+          'visibility',
+          'visible'
+        );
+      }
+    };
+
+    const layers = document.getElementById('menu');
+    layers.appendChild(link);
+  }
+});
+
+
+
+
+
+// THIRD MAP
 var map_tre = new mapboxgl.Map({
-    container: 'map_third',
-    style: 'mapbox://styles/lucagorini/cl2t3c0k1000314npzj6k6lgj',
-    accessToken: 'pk.eyJ1IjoibHVjYWdvcmluaSIsImEiOiJja28yd2tzdjQxM3NqMnFwZ3BremZ2Y3hrIn0.TOK_D8r2LULbVb-3ULVf8Q',
-    center:[8.533621, 47.119] ,
-    zoom: 4
+  container: 'map_third',
+  style: 'mapbox://styles/lucagorini/cl2t3c0k1000314npzj6k6lgj',
+  accessToken: 'pk.eyJ1IjoibHVjYWdvcmluaSIsImEiOiJja28yd2tzdjQxM3NqMnFwZ3BremZ2Y3hrIn0.TOK_D8r2LULbVb-3ULVf8Q',
+  center: [11.845, 42.651],
+  zoom: 5.2
 });
 
 map_tre.scrollZoom.disable();

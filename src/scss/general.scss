@@ -249,6 +249,9 @@ strong{
 .map_flyto{
   width:60%;
 }
+.map_navigation{
+  border-right:1px solid $green;
+}
 
 
 
@@ -289,5 +292,17 @@ strong{
   padding: $spacing*6 $spacing;
   li{
     margin-bottom: $spacing;
+  }
+}
+
+.mapboxgl-popup{
+  .mapboxgl-popup-content{
+    border-radius: 0;
+    border:1px solid $green;
+    font-family: "sans-medium";
+  }
+
+  .mapboxgl-popup-tip{
+    display: none;
   }
 }
