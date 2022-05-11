@@ -1,6 +1,7 @@
 import mapboxgl from '!mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import * as data from './dataset-verde-abitante.json';
+import * as alberi from './alberi_p5.json';
 
 
 // first map
@@ -164,4 +165,21 @@ var map_tre = new mapboxgl.Map({
   zoom: 5.2
 });
 
-map_tre.scrollZoom.disable();
+map_due.on('load', () => {
+
+  map_tre.addSource('alberi', {
+    type: 'geojson',
+    data: alberi
+  });
+
+  map_tre.addLayer({
+    'id': 'albero',
+    'type': 'circle',
+    'source': 'alberi',
+    'paint': {
+      'circle-color': "green",
+      'circle-radius': 2.5,
+    }
+  }, "country-label");
+
+});
