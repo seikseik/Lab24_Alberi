@@ -7,7 +7,7 @@
     <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/mapbox/assembly/publisher-staging/src/svgs/mapbox.svg">
   </head>
   <body>
-    
+
 
   <section class="hero">
     <div class="hero_heading">
@@ -168,16 +168,18 @@
 
 
     <section class="text_section section">
-      <div class="text_container section_container">
+      <div class="text_container section_container no-margin-bottom">
         <div class="paragraph">
           <p fade>Gli alberi oltre a “mangiare” smog riducono poi la temperatura dell'ambiente in cui si trovano durante i mesi più caldi. Non solo le loro chiome creano un forte ombreggiamento, ma tramite il processo di “evapotraspirazione”, il corrispettivo arboreo della sudorazione umana, espellono acqua per raffreddarsi, che quando evapora riduce ulteriormente la temperatura dell’area circostante.</p>
 
           <p fade>In corrispondenza delle zone maggiormente cementificate e con meno alberi, si creano più facilmente aree note come isole di calore, più calde rispetto alle circostanti zone limitrofe periferiche e rurali.</p>
-
-          <p fade>In climatologia, con il termine isola di calore si intende un particolare fenomeno urbano in cui si creano aree più calde all'interno della città, in corrispondenza delle zone maggiormente antropizzate, rispetto alle circostanti aree periferiche e rurali. Il maggior accumulo di calore è determinato da una serie di concause, in interazione tra loro, tra le quali sono da annoverare la diffusa cementificazione, le superfici asfaltate che prevalgono nettamente rispetto alle aree verdi e le emissioni degli autoveicoli, degli impianti  e dei sistemi di riscaldamento o raffreddamento.</p>
         </div>
       </div>
     </section>
+
+    <div class="text_highlight_container">
+      <p fade> <span>ISOLA DI CALORE </span> <img src="./images/content/arrow_lf.svg" alt="">In climatologia, con il termine <strong>isola di calore</strong> si intende un particolare fenomeno urbano in cui si creano aree più calde all'interno della città, in corrispondenza delle zone maggiormente antropizzate, rispetto alle circostanti aree periferiche e rurali. Il maggior accumulo di calore è determinato da una serie di concause, in interazione tra loro, tra le quali sono da annoverare la diffusa cementificazione, le superfici asfaltate che prevalgono nettamente rispetto alle aree verdi e le emissioni degli autoveicoli, degli impianti  e dei sistemi di riscaldamento o raffreddamento.</p>
+    </div>
 
     <div class="line"></div>
 
@@ -233,8 +235,68 @@
       <section class="map_section">
         <div class="map_navigation">
 
+          <div id="roma" class="tabcontent" style="display: block;">
+            <h3>Roma</h3>
+            <p>London is the capital city of England.</p>
+          </div>
+
+          <div id="napoli" class="tabcontent">
+            <h3>Napoli</h3>
+            <p>Paris is the capital of France.</p>
+          </div>
+
+          <div id="bologna" class="tabcontent">
+            <h3>Bologna</h3>
+            <p>Tokyo is the capital of Japan.</p>
+          </div>
+
+          <div id="torino" class="tabcontent">
+            <h3>Torino</h3>
+            <p>Tokyo is the capital of Japan.</p>
+          </div>
+
+          <div class="tab">
+            <button class="tablinks active" city="roma">
+              <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.5399e-08 7L4 0.0717965L12 0.0717966L16 7L12 13.9282L4 13.9282L9.5399e-08 7Z" fill="#C5C5C5"/>
+              </svg>
+            </button>
+            <button class="tablinks" city="napoli" >
+              <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.5399e-08 7L4 0.0717965L12 0.0717966L16 7L12 13.9282L4 13.9282L9.5399e-08 7Z" fill="#C5C5C5"/>
+              </svg>
+            </button>
+            <button class="tablinks" city="bologna" >
+              <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.5399e-08 7L4 0.0717965L12 0.0717966L16 7L12 13.9282L4 13.9282L9.5399e-08 7Z" fill="#C5C5C5"/>
+              </svg>
+            </button>
+            <button class="tablinks" city="torino" >
+              <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.5399e-08 7L4 0.0717965L12 0.0717966L16 7L12 13.9282L4 13.9282L9.5399e-08 7Z" fill="#C5C5C5"/>
+              </svg>
+            </button>
+          </div>
+
         </div>
+
         <div id="map_third" class="map_flyto"></div>
+      </section>
+      <div class="line"></div>
+
+
+      <section id="number_illu" class="info_section section">
+        <div class="info_container section_container">
+          <div class="section_title_container">
+            <img src="./images/content/info_first_icon.svg" alt="">
+            <div class="section_title">
+              <h4>IL NUMERO DI ALBERI OGNI 100 ABITANTI  IN ALCUNI GRANDI CENTRI ITALIANI </h4>
+            </div>
+          </div>
+          <div class="illustration_container">
+            <img src="./images/content/number_illu.svg" alt="">
+          </div>
+        </div>
       </section>
 
 
@@ -279,7 +341,7 @@
           </div>
         </section>
 
-        <div class="line">  </div>
+        <div class="line"> </div>
 
 
         <section class="text_section section">

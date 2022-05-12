@@ -157,15 +157,41 @@ map_due.on('idle', () => {
 
 
 // THIRD MAP
+
+const chapters = {
+  'roma': {
+    center: [-0.15591514, 51.51830379],
+    zoom: 15.5,
+    essential: true
+  },
+  'napoli': {
+    center: [-0.07571203, 51.51424049],
+    zoom: 15,
+    essential: true
+  },
+  'bologna': {
+    center: [-0.08533793, 51.50438536],
+    zoom: 13,
+    essential: true
+  },
+  'torino': {
+    center: [-0.08533793, 51.50438536],
+    zoom: 13,
+    essential: true
+  }
+}
+
 var map_tre = new mapboxgl.Map({
   container: 'map_third',
   style: 'mapbox://styles/lucagorini/cl2t3c0k1000314npzj6k6lgj',
   accessToken: 'pk.eyJ1IjoibHVjYWdvcmluaSIsImEiOiJja28yd2tzdjQxM3NqMnFwZ3BremZ2Y3hrIn0.TOK_D8r2LULbVb-3ULVf8Q',
-  center: [11.845, 42.651],
-  zoom: 5.2
+  center: [12.496, 41.90278],
+  zoom: 11.3
 });
 
-map_due.on('load', () => {
+// map_tre.scrollZoom.disable();
+
+map_tre.on('load', () => {
 
   map_tre.addSource('alberi', {
     type: 'geojson',
@@ -178,8 +204,38 @@ map_due.on('load', () => {
     'source': 'alberi',
     'paint': {
       'circle-color': "green",
-      'circle-radius': 2.5,
+      'circle-radius': 1.5,
     }
   }, "country-label");
 
+
+  let tabs = document.querySelectorAll(".tablinks");
+
+    tabs.forEach((item, i) => {
+      item.addEventListener("click", function(e){
+        let città = item.getAttribute("city")
+        openCity(e, città)
+        map_tre.flyTo(chapters[città])
+      })
+    });
+
 });
+
+
+// tabs
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}

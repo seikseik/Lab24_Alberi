@@ -9,6 +9,8 @@ $size_quote: 60px;
 $spacing:15px;
 $spacing_left:15vw;
 $text_container: 800px;
+$text_highlight_container: 1000px;
+$spacing_left_highlight: calc(#{$spacing_left} - 100px);
 $header_width: calc( #{$text_container} + #{$spacing_left});
 
 $green: #21AE68;

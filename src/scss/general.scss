@@ -136,6 +136,38 @@ strong{
     }
   }
 }
+.no-margin-bottom{margin-bottom: 0 !important;}
+
+.text_highlight_container{
+  width: $text_highlight_container;
+  margin: 0 auto 0 $spacing_left_highlight;
+  border-radius: 10px;
+  @include gradient;
+  p{
+    width: $text_container;
+    margin-left: 100px;
+    padding: $spacing*2 $spacing;
+    margin-bottom: $spacing*2;
+    @include border_lr;
+    border-color:white;
+    color:white;
+    line-height: 1.4;
+    span{
+      float: left;
+      color:black;
+      font-size: 16px;
+      background: white;
+      border-radius: 50px;
+      padding: 5px $spacing;
+      line-height: 1;
+    }
+    img{
+      float: left;
+      margin-right: $spacing/2;
+      height: 27px;
+    }
+  }
+}
 
 
 .section_title_container{
@@ -224,6 +256,19 @@ strong{
   }
 }
 
+#number_illu{
+  .illustration_container{
+    padding: $spacing 0;
+    padding-bottom: $spacing*2;
+    margin-top: $spacing;
+    img{
+      width: 100%;
+      max-width: unset;
+      height: auto;
+    }
+  }
+}
+
 
 .map_section{
   height: 100vh;
@@ -305,4 +350,31 @@ strong{
   .mapboxgl-popup-tip{
     display: none;
   }
+}
+
+// map tabs
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+
+.tabcontent {
+  display: none;
+}
+
+.tabcontent {
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
