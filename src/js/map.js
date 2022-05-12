@@ -160,23 +160,23 @@ map_due.on('idle', () => {
 
 const chapters = {
   'roma': {
-    center: [-0.15591514, 51.51830379],
-    zoom: 15.5,
+    center: [12.496, 41.90278],
+    zoom: 11.3,
     essential: true
   },
   'napoli': {
-    center: [-0.07571203, 51.51424049],
-    zoom: 15,
+    center: [14.2681244, 40.8517746],
+    zoom: 11.4,
     essential: true
   },
   'bologna': {
-    center: [-0.08533793, 51.50438536],
-    zoom: 13,
+    center: [11.3426163, 44.494887],
+    zoom: 11.3,
     essential: true
   },
   'torino': {
-    center: [-0.08533793, 51.50438536],
-    zoom: 13,
+    center: [7.6868565, 45.070312],
+    zoom: 11.3,
     essential: true
   }
 }
@@ -188,6 +188,9 @@ var map_tre = new mapboxgl.Map({
   center: [12.496, 41.90278],
   zoom: 11.3
 });
+
+map_tre.scrollZoom.disable();
+
 
 // map_tre.scrollZoom.disable();
 

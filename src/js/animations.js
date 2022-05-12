@@ -30,3 +30,8 @@ fadeUp.forEach((el, i) => {
     once: true,
   });
 });
+
+let scrolltop = document.querySelector(".arrow-stiky-scrolltop");
+scrolltop.addEventListener("click", function(){
+  gsap.to(window, {duration: 2, scrollTo: 0});
+})

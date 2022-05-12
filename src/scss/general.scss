@@ -1,6 +1,11 @@
 body{
   font-size: $size_text;
   font-family: "sans-regular";
+  background: #F9F9F9;
+}
+
+a{
+  color:black;
 }
 
 strong{
@@ -25,7 +30,7 @@ strong{
   left: calc(15vw - 15px);
   width: 600px;
   height: 100%;
-  background: white;
+  background: $white;
   padding: $spacing;
 }
 
@@ -38,7 +43,7 @@ strong{
       @include gradient;
       padding: 3px 10px;
       border-radius: 20px;
-      color:white;
+      color:$white;
       font-size: $size_xsmall;
     }
     p{
@@ -79,11 +84,23 @@ strong{
   }
 }
 
+.arrow-stiky-scrolltop{
+  position: absolute;
+  bottom: $spacing;
+  right: $spacing;
+  transition: .2s ease;
+  z-index: 999;
+  cursor: pointer;
+  &:hover{
+    rect{fill:$green;}
+  }
+}
+
 
 .header_section{
   @include border_tb;
   @include gradient;
-  color:white;
+  color:$white;
 }
 
 .header_section{
@@ -100,7 +117,7 @@ strong{
     align-items: center;
     span{
       height: 1px;
-      background: white;
+      background: $white;
       width:100%;
     }
   }
@@ -109,7 +126,7 @@ strong{
     padding-left: 0;
     h3{
       padding-left: $spacing;
-      border-left:1px solid white;
+      border-left:1px solid $white;
       text-transform: uppercase;
     }
   }
@@ -126,6 +143,10 @@ strong{
   }
 }
 
+.droptext{
+  float: left;
+  margin-right: $spacing;
+}
 
 .text_container{
   .paragraph{
@@ -149,14 +170,14 @@ strong{
     padding: $spacing*2 $spacing;
     margin-bottom: $spacing*2;
     @include border_lr;
-    border-color:white;
-    color:white;
+    border-color:$white;
+    color:$white;
     line-height: 1.4;
     span{
       float: left;
       color:black;
       font-size: 16px;
-      background: white;
+      background: $white;
       border-radius: 50px;
       padding: 5px $spacing;
       line-height: 1;
@@ -275,7 +296,7 @@ strong{
   display: flex;
   .col_left_map{
     width: 33.33%;
-    background: white;
+    background: $white;
     border-right:1px solid $green;
     .col-container{
       display: flex;
@@ -335,8 +356,10 @@ strong{
   justify-content: center;
   align-items: center;
   padding: $spacing*6 $spacing;
+  @include gradient;
   li{
     margin-bottom: $spacing;
+    color:white;
   }
 }
 
@@ -354,6 +377,57 @@ strong{
 
 // map tabs
 
+
+.map_navigation{
+  padding: $spacing*3 $spacing;
+  display: flex;
+  flex-direction: column;
+}
+
+.tab_content_container{
+  height: 100%;
+}
+
+.tab_heading{
+  display: flex;
+  border-bottom: 1px solid $green;
+  margin-bottom: $spacing;
+  padding-bottom: $spacing;
+  .tab_num{
+    width:35px;
+    height: 35px;
+    @include gradient;
+    color:$white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  h3{
+    @include gradient_text;
+    margin-left: $spacing;
+    font-family: "sans-medium"
+  }
+}
+
+.tab_content{
+  p{
+    max-width: 90%;
+    margin-left: 10%;
+    border-left: 1px solid $green;
+    padding-left: $spacing;
+    line-height: 1.4;
+  }
+}
+
+
+.tabcontent {
+  display: none;
+}
+
+.tab{
+  display: flex;
+  justify-content: center;
+}
 .tab button {
   background-color: inherit;
   float: left;
@@ -364,16 +438,22 @@ strong{
   transition: 0.3s;
 }
 
-
-.tabcontent {
-  display: none;
+.tablinks{
+  &:hover{
+    opacity: .6;
+    path{fill:$green;}
+  }
+  &.active{
+    path{
+      fill:$green;
+    }
+  }
 }
 
 .tabcontent {
-  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+  animation: fadeEffect 1s;
 }
 
-/* Go from zero to full opacity */
 @keyframes fadeEffect {
   from {opacity: 0;}
   to {opacity: 1;}
