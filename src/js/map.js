@@ -1,7 +1,7 @@
 import mapboxgl from '!mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import * as data from './dataset-verde-abitante.json';
-import * as alberi from './alberi_p5.json';
+// import * as data from './dataset-verde-abitante.json';
+// import * as alberi from './alberi_p5.json';
 
 
 // first map
@@ -155,7 +155,6 @@ map_due.on('idle', () => {
 
 
 
-
 // THIRD MAP
 
 const chapters = {
@@ -181,48 +180,48 @@ const chapters = {
   }
 }
 
-var map_tre = new mapboxgl.Map({
-  container: 'map_third',
-  style: 'mapbox://styles/lucagorini/cl2t3c0k1000314npzj6k6lgj',
-  accessToken: 'pk.eyJ1IjoibHVjYWdvcmluaSIsImEiOiJja28yd2tzdjQxM3NqMnFwZ3BremZ2Y3hrIn0.TOK_D8r2LULbVb-3ULVf8Q',
-  center: [12.496, 41.90278],
-  zoom: 11.3
-});
-
-map_tre.scrollZoom.disable();
+// var map_tre = new mapboxgl.Map({
+//   container: 'map_third',
+//   style: 'mapbox://styles/lucagorini/cl2t3c0k1000314npzj6k6lgj',
+//   accessToken: 'pk.eyJ1IjoibHVjYWdvcmluaSIsImEiOiJja28yd2tzdjQxM3NqMnFwZ3BremZ2Y3hrIn0.TOK_D8r2LULbVb-3ULVf8Q',
+//   center: [12.496, 41.90278],
+//   zoom: 11.3
+// });
+//
+// map_tre.scrollZoom.disable();
 
 
 // map_tre.scrollZoom.disable();
 
-map_tre.on('load', () => {
-
-  map_tre.addSource('alberi', {
-    type: 'geojson',
-    data: alberi
-  });
-
-  map_tre.addLayer({
-    'id': 'albero',
-    'type': 'circle',
-    'source': 'alberi',
-    'paint': {
-      'circle-color': "green",
-      'circle-radius': 1.5,
-    }
-  }, "country-label");
-
-
-  let tabs = document.querySelectorAll(".tablinks");
-
-    tabs.forEach((item, i) => {
-      item.addEventListener("click", function(e){
-        let città = item.getAttribute("city")
-        openCity(e, città)
-        map_tre.flyTo(chapters[città])
-      })
-    });
-
-});
+// map_tre.on('load', () => {
+//
+//   map_tre.addSource('alberi', {
+//     type: 'geojson',
+//     data: alberi
+//   });
+//
+//   map_tre.addLayer({
+//     'id': 'albero',
+//     'type': 'circle',
+//     'source': 'alberi',
+//     'paint': {
+//       'circle-color': "green",
+//       'circle-radius': 1.5,
+//     }
+//   }, "country-label");
+//
+//
+//   let tabs = document.querySelectorAll(".tablinks");
+//
+//     tabs.forEach((item, i) => {
+//       item.addEventListener("click", function(e){
+//         let città = item.getAttribute("city")
+//         openCity(e, città)
+//         map_tre.flyTo(chapters[città])
+//       })
+//     });
+//
+// });
 
 
 // tabs

@@ -21,17 +21,33 @@ strong{
 .hero{
   height: 100vh;
   width:100%;
-  background: lightgrey;
+  background: 0;
   position: relative;
+  overflow: hidden;
+  .background_image{
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+  }
+  .img_left{
+    width:15vw;
+    min-height: 100%;
+  }
+  .img_right{
+    width: calc(100vw - (15vw + 600px));
+    right: 0;
+    min-height: 100%;
+  }
 }
 
 .hero_heading{
   position: absolute;
-  left: calc(15vw - 15px);
+  left: calc(15vw - 0px);
   width: 600px;
+  max-width: 100%;
   height: 100%;
   background: $white;
-  padding: $spacing;
+  // padding: $spacing;
 }
 
 .hero_heading_top{
@@ -52,11 +68,12 @@ strong{
         font-family: "serif-xbold"
       }
     }
-    img{
+    img, svg{
       position: absolute;
       left: 175px;
       top: -14px;
       width: 70px;
+      height: 66px;
     }
   }
 }
@@ -84,7 +101,7 @@ strong{
   }
 }
 
-.arrow-stiky-scrolltop{
+.scroll{
   position: absolute;
   bottom: $spacing;
   right: $spacing;
@@ -105,6 +122,7 @@ strong{
 
 .header_section{
   width:$header_width;
+  max-width: 100%;
 }
 .header_container{
   display: flex;
@@ -135,6 +153,7 @@ strong{
 .section{
   width: $text_container;
   height: 100%;
+  max-width: 100%;
   margin: 0 auto 0 $spacing_left;
   .section_container{
     padding: 0 $spacing;
@@ -163,9 +182,11 @@ strong{
   width: $text_highlight_container;
   margin: 0 auto 0 $spacing_left_highlight;
   border-radius: 10px;
+  max-width: 100%;
   @include gradient;
   p{
     width: $text_container;
+    max-width: 100%;
     margin-left: 100px;
     padding: $spacing*2 $spacing;
     margin-bottom: $spacing*2;
@@ -457,4 +478,187 @@ strong{
 @keyframes fadeEffect {
   from {opacity: 0;}
   to {opacity: 1;}
+}
+
+.mobile{display: none;}
+.desktop{display: block;}
+
+@media screen and (max-width: 900px) {
+
+  .mobile{display: block;}
+  .desktop{display: none;}
+
+
+  body{
+    font-size: 18px;
+  }
+  .line{
+    width: calc(100% - 30px);
+    margin-left: $spacing;
+  }
+
+
+  .hero{
+    height: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    .img_left{
+      display: none;
+    }
+    .img_right{
+      position: relative;
+      width:100%;
+    }
+  }
+
+  .hero_heading{
+    left: 0;
+    position: relative;
+    width:100%;
+    .hero_heading_container{
+      margin: $spacing/2;
+      margin-bottom: 0;
+      padding: $spacing/2;
+      padding-bottom: 0;
+    }
+    .hero_heading_top{
+      margin-bottom: $spacing*5;
+      .line{
+        width: 100%;
+        margin-left: 0;
+      }
+      .row{
+        padding: $spacing/2 $spacing;
+        svg{
+          position: absolute;
+          left: 143px;
+          top: -9px;
+          width: 53px;
+          height: 54px;
+        }
+      }
+    }
+  }
+
+  .hero_heading_title_container{
+    h2{
+      font-size: 50px;
+      line-height: 1;
+      margin-bottom: $spacing;
+    }
+  }
+
+
+  .header_section{
+    margin-bottom: $spacing/2;
+  }
+  .header_container{
+    .line_left{display: none;}
+    .header_title{
+      h3{
+        margin-left: $spacing/2;
+        padding-left: $spacing/2;
+      }
+    }
+  }
+
+  .quote_section{
+    .section_title_container{
+      width:100%;
+    }
+    .quote_container{
+      h2{
+        font-size: 40px;
+        padding: $spacing/2 0;
+      }
+    }
+  }
+
+  .text_container .paragraph{
+    padding: $spacing 0;
+  }
+
+  .section{
+    margin: 0;
+    width:100%;
+    .text_container{
+      margin: $spacing $spacing/2;
+      padding: 0 $spacing/2;
+    }
+    .section_container{
+      margin: $spacing $spacing/2;
+      padding: 0 $spacing/2;
+    }
+  }
+  .section_title_container{
+    width:100%;
+  }
+
+  .info_section{
+    .info_container{
+      margin: $spacing $spacing/2;
+      padding: 0 $spacing/2;
+    }
+  }
+
+  #first_illu .illustration_container img{
+    width:100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  #second_illu .illustration_container{
+    padding: $spacing/2;
+    img{
+      width:100%;
+      max-width: 500px;
+      margin: 0 auto;
+      margin-top: $spacing/2
+     }
+  }
+
+  #third_illu .illustration_container img{
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: -10%;
+  }
+
+  .text_highlight_container{
+    margin: 0;
+    padding: $spacing/2;
+    border-radius: 0;
+    p{
+      margin: 0;
+      padding: $spacing/2;;
+    }
+  }
+
+  .map_section{
+    height: unset;
+    flex-direction: column;
+    .col_left_map{
+      width:100%;
+      padding: $spacing/2;
+      border-right: 0;
+    }
+    .col_right_map{
+      width:100%;
+      height: 100vh;
+    }
+
+    .map_navigation{
+      width:100%;
+    }
+    .map_flyto{
+      width:100%;
+      height: 100vh;
+    }
+
+  }
+
+  .credits{
+    margin-top: $spacing/2;
+    padding: $spacing*3 $spacing;
+  }
+
+
 }

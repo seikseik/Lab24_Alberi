@@ -31,7 +31,10 @@ fadeUp.forEach((el, i) => {
   });
 });
 
-let scrolltop = document.querySelector(".arrow-stiky-scrolltop");
-scrolltop.addEventListener("click", function(){
-  gsap.to(window, {duration: 2, scrollTo: 0});
-})
+
+
+let h = document.querySelector(".hero").offsetHeight;
+let arrow = document.querySelector(".scroll");
+arrow.addEventListener("click", function(){
+  gsap.to(window, {duration: 1, scrollTo: h});
+});
