@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="apple-touch-icon" sizes="57x57" href="http://c2.res.24o.it/ico/apple-touch-icon-57x57.png">
+  	<link rel="apple-touch-icon" sizes="60x60" href="http://c2.res.24o.it/ico/apple-touch-icon-60x60.png">
+  	<link rel="apple-touch-icon" sizes="72x72" href="http://c2.res.24o.it/ico/apple-touch-icon-72x72.png">
+  	<link rel="apple-touch-icon" sizes="76x76" href="http://c2.res.24o.it/ico/apple-touch-icon-76x76.png">
+  	<link rel="apple-touch-icon" sizes="114x114" href="http://c2.res.24o.it/ico/apple-touch-icon-114x114.png">
+  	<link rel="apple-touch-icon" sizes="120x120" href="http://c2.res.24o.it/ico/apple-touch-icon-120x120.png">
+  	<link rel="apple-touch-icon" sizes="144x144" href="http://c2.res.24o.it/ico/apple-touch-icon-144x144.png">
+  	<link rel="apple-touch-icon" sizes="152x152" href="http://c2.res.24o.it/ico/apple-touch-icon-152x152.png">
+  	<link rel="apple-touch-icon" sizes="180x180" href="http://c2.res.24o.it/ico/apple-touch-icon-180x180.png">
+    <title>Lab 24 - Alberi</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script defer src="js/app.js"></script><link href="css/app.css" rel="stylesheet"></head>
+  <body>
+
+
+  <section class="hero">
+    <img class="background_image full" src="./images/content/hero_full.png" alt="">
+    <div class="hero_heading">
+      <div class="hero_heading_container">
+        <div class="hero_heading_top">
+          <div class="line"></div>
+          <div class="row">
+            <span>VERDE URBANO</span>
+          </div>
+          <div class="line"></div>
+          <div class="row">
+            <p>a cura di <strong>Dalk + Alberto Guidi + Lab24</strong> </p>
+          </div>
+          <div class="line"></div>
+          <div class="row">
+            <p>tempo di lettura</p>
+
+            <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24.4947" cy="24.4949" r="20" transform="rotate(15 24.4947 24.4949)" fill="url(#paint0_linear_360_123)"/>
+              <path
+                d="M16.1724 19.1759C17.6027 18.9768 19.0229 18.8721 20.433 18.8617L21.0131 19.1081C20.6926 20.0777 20.3739 21.154 20.0569 22.3369L19.3199 25.0875C19.097 25.9195 18.9688 26.4432 18.9353 26.6587C18.9018 26.8742 18.9256 27.0231 19.0067 27.1055L20.3727 27.6444L20.168 28.4085L14.2847 26.832L14.4849 26.0849L16.1258 26.379C16.2428 26.3497 16.3436 26.2342 16.428 26.0324C16.518 25.832 16.6799 25.2961 16.9134 24.4245L17.5481 22.0559C17.7877 21.1617 17.9851 20.5382 18.1402 20.1855C17.5191 20.104 16.8451 19.9931 16.1183 19.853L16.1724 19.1759ZM22.5852 24.3792C22.9582 22.9869 23.7219 21.9935 24.876 21.3989C26.0317 20.7986 27.1953 20.6555 28.3669 20.9694C29.5724 21.2924 30.5157 21.994 31.1968 23.0743C31.8851 24.1505 32.0397 25.396 31.6605 26.8109C31.2875 28.2032 30.5373 29.2033 29.4099 29.8111C28.2897 30.4148 27.1042 30.5491 25.8534 30.2139C24.6252 29.8848 23.6791 29.1824 23.015 28.1067C22.3523 27.0253 22.2091 25.7828 22.5852 24.3792ZM25.1575 25.0685C24.8618 26.1721 24.7769 27.1229 24.9027 27.921C25.0358 28.7149 25.4447 29.2036 26.1295 29.3871C26.803 29.5676 27.3895 29.3486 27.8888 28.7302C28.3896 28.1062 28.7894 27.2366 29.0882 26.1217C29.393 24.9841 29.481 24.0219 29.3521 23.2352C29.2232 22.4484 28.8107 21.9618 28.1145 21.7753C27.4523 21.5978 26.8657 21.8289 26.3547 22.4684C25.8493 23.1094 25.4502 23.9761 25.1575 25.0685ZM34.7387 21.1299C34.8418 20.745 35.0632 20.4282 35.4028 20.1795C35.7424 19.9308 36.0905 19.8542 36.4471 19.9498C36.9112 20.0741 37.286 20.3505 37.5716 20.7788C37.8644 21.2031 37.9486 21.6472 37.8242 22.1113C37.4891 23.3621 36.3363 24.2573 34.3658 24.797L34.1318 24.0063C35.1293 23.6792 35.6842 23.3062 35.7965 22.8873C35.8268 22.7741 35.8052 22.6622 35.7318 22.5515C35.6655 22.4367 35.4967 22.2854 35.2256 22.0974C34.8115 21.7863 34.6493 21.4638 34.7387 21.1299Z"
+                fill="#F9F9F9"/>
+              <defs>
+                <linearGradient id="paint0_linear_360_123" x1="-3.51362" y1="-5.19291" x2="54.8995" y2="-4.92302" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#07A76F"/>
+                  <stop offset="1" stop-color="#8ECA45"/>
+                </linearGradient>
+              </defs>
+            </svg>
+
+
+          </div>
+          <div class="line"></div>
+        </div>
+
+        <div class="hero_heading_title_container">
+          <h2>L'albero, risorsa e sfida per le città</h2>
+          <p>Come e perché gli alberi, e il verde urbano in generale, rappresentano uno degli elementi fondamentali per lo sviluppo delle città in ottica sostenibile — partendo da un'analisi dei dati e passando per gli obiettivi del PNRR</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="30" y="30" width="30" height="30" rx="4" transform="rotate(-180 30 30)" fill="#1E2528"/>
+      <path d="M15 22L15 8M15 22L8.5 14M15 22L21.5 14" stroke="#F9F9F9" stroke-width="2" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+  </section>
+
+  <main>
+
+  <div class="line desktop"></div>
+    <div class="header_section">
+      <div class="header_container">
+        <div class="line_left">
+            <span></span>
+        </div>
+        <div class="header_title">
+          <h3>il verde urbano: protagonista nel futuro delle città</h3>
+        </div>
+      </div>
+    </div>
+    <div class="line desktop"></div>
+
+
+    <section class="text_section section">
+      <div class="text_container section_container">
+        <div class="paragraph">
+          <p fade>
+          <span class="droptext">
+            <img src="./images/content/parte-1.svg" alt="">
+          </span>
+          <strong>Le città stanno diventando sempre più centrali</strong> e importanti nella vita di molte persone. Saranno il campo principale dove giocheremo le sfide del futuro: la sostenibilità del nostro stile di vita, la lotta al cambiamento climatico, la ricerca del benessere individuale attraverso lo sviluppo e le innovazioni tecnologiche. Uno dei temi fondamentali, alla luce del secolare fenomeno di urbanizzazione, riguarda l’utilizzo dello spazio urbano, pubblico e privato.</p>
+          <p fade>È infatti cresciuta la consapevolezza su fenomeni come la dispersione e la rigenerazione urbana, il consumo del suolo, la mobilità sostenibile, l’accessibilità, la qualità dell’aria e dei servizi.</p>
+        </div>
+      </div>
+    </section>
+
+  <div animate class="line"></div>
+
+    <section class="quote_section section">
+      <div class="quote_container section_container">
+
+        <div class="section_title_container">
+          <img src="./images/content/quote_icon.svg" alt="">
+          <div class="section_title">
+            <h4>Le parole di Ban Ki-moon </h4>
+            <p>Ex Segretario Generale dell’ONU</p>
+          </div>
+        </div>
+
+        <h2>Le città sono il luogo in cui la battaglia per lo sviluppo sostenibile sarà vinta, o persa</h2>
+      </div>
+    </section>
+
+    <div animate class="line"></div>
+
+
+    <section class="text_section section">
+      <div class="text_container section_container">
+        <div class="paragraph">
+          <p fade>Un elemento in particolare fa da sfondo alla ricerca di qualità della vita in città: il verde urbano. Che sia un parco o un singolo albero, quando si progetta un nuovo spazio o la rigenerazione di un’area già esistente è necessario trovare la giusta collocazione per il verde, che dev’essere accessibile in maniera semplice e diretta.</p>
+
+          <p fade>«Riconoscendo l'urgenza di combattere il degrado del suolo e creare nuove vasche di assorbimento del carbonio, condividiamo l'obiettivo ambizioso di piantare collettivamente 1.000 miliardi di alberi entro il 2030». Questo è quanto si legge nella dichiarazione finale del vertice del G20 di Roma dello scorso ottobr: un impegno che per l’Unione Europea si è tradotto nella “Strategia europea per la biodiversità al 2030”, che mira a piantare almeno 3 miliardi di alberi supplementari entro la fine del decennio.</p>
+        </div>
+      </div>
+    </section>
+
+    <div animate class="line"></div>
+
+    <section id="first_illu" class="info_section section">
+      <div class="info_container section_container">
+        <div class="section_title_container">
+          <img src="./images/content/info_first_icon.svg" alt="">
+          <div class="section_title">
+            <h4>IL NUMERO DI PERSONE CHE VIVONO NEI CENTRI URBANI AUMENTERà, SUPERANDO I 6Mld NEL 2050 </h4>
+          </div>
+        </div>
+        <div  class="illustration_container">
+          <img class="desktop" src="./images/content/info_first.svg" alt="">
+          <img class="mobile" src="./images/content/info_first_mobile.svg" alt="">
+
+        </div>
+      </div>
+    </section>
+
+    <div animate class="line"></div>
+
+
+    <section class="text_section section">
+      <div class="text_container section_container">
+        <div class="paragraph">
+          <p fade>Particolare importanza viene data al tema delle infrastrutture verdi nelle aree urbane e periurbane, invitando i centri europei di almeno 20mila abitanti a elaborare entro la fine del 2021 piani ambiziosi di inverdimento urbano, che includano cioè misure intese a creare in città boschi, parchi e giardini accessibili e ricchi di biodiversità.</p>
+
+          <p fade>Secondo ASviS, l’alleanza italiana per lo sviluppo sostenibile, in Italia sono 8 su 109 (il 7%) i Comuni capoluogo di provincia che dichiarano di aver elaborato un Piano del verde. E anche in termini di metri quadrati di verde urbano accessibile per abitante, mediamente le città italiane performano peggio di quelle del Nord Europa. Calcolando infatti solo le superfici destinate a verde attrezzato e aree sportive all’aperto appena il 17% dei Comuni capoluogo di provincia supera la soglia dei 9 m2/ab – minimo standard raccomandato dall'Organizzazione Mondiale della Sanità e metà dell’attuale media europea.</p>
+        </div>
+      </div>
+    </section>
+
+  <div class="line desktop"></div>
+    <section id="map" class="map_section"> </section>
+
+
+    <div class="line"></div>
+      <div class="header_section">
+        <div class="header_container">
+          <div class="line_left">
+              <span></span>
+          </div>
+          <div class="header_title">
+            <h3>I principali benefici del verde urbano</h3>
+          </div>
+        </div>
+      </div>
+      <div class="line"></div>
+
+    <section class="text_section section">
+      <div class="text_container section_container">
+        <div class="paragraph">
+          <p fade>
+
+            <span class="droptext">
+              <img src="./images/content/parte-2.svg" alt="">
+            </span>
+
+            <strong>Perché gli alberi e il verde sono importanti per le nostre città?</strong> Perché ne cerchiamo sempre di più la presenza? Si possono citare una miriade di effetti positivi forniti dai sistemi verdi urbani e periurbani. Dalla riduzione dell’inquinamento acustico e del rischio idrogeologico, alla riqualificazione estetica dei paesaggi urbani, gli alberi favoriscono un territorio e uno stile di vita sani. Durante i lockdown e le restrizioni della pandemia, ci siamo resi conto di quanto sia fondamentale avere un’area verde vicino a casa per il proprio benessere fisico e mentale. Ma il verde pubblico in città è anche e soprattutto importante per la sua capacità di assorbimento della CO2 e di mitigazione del fenomeno delle isole di calore urbano.</p>
+
+          <p fade>La forestazione urbana, secondo molti studi, è la soluzione più efficace ed economica per mitigare l’inquinamento atmosferico: gli alberi sono infatti eccezionali purificatori d’aria. Grazie al processo della fotosintesi clorofilliana assorbono tramite le foglie, il tronco e le ramificazioni, una grande quantità di particolato atmosferico e gas inquinanti, producendo in cambio ossigeno.</p>
+        </div>
+      </div>
+    </section>
+
+    <div animate class="line"></div>
+
+
+    <section id="second_illu" class="info_section section">
+      <div class="info_container section_container">
+        <div class="section_title_container">
+          <img src="./images/content/info_first_icon.svg" alt="">
+          <div class="section_title">
+            <h4>Gli alberi che assorbono <br> più CO2 in un anno </h4>
+          </div>
+        </div>
+        <div class="illustration_container">
+          <img class="desktop" src="./images/content/info_second.svg" alt="">
+          <img class="mobile" src="./images/content/info_second_mobile.svg" alt="">
+
+        </div>
+      </div>
+    </section>
+
+    <div animate class="line"></div>
+
+
+    <section class="text_section section">
+      <div class="text_container section_container no-margin-bottom">
+        <div class="paragraph">
+          <p fade>Ma non tutti gli alberi sono ugualmente efficaci in questa azione: un esemplare maturo di Betulla Bianca riesce ad esempio ad assimilare in un anno un quantitativo doppio di CO2 rispetto, ad esempio, a una Castagno d’India, che comunque rientra tra le migliori 20 specie diffuse in Italia sotto questo punto di vista.</p>
+
+          <p fade>Gli alberi oltre a “mangiare” smog riducono poi la temperatura dell'ambiente in cui si trovano durante i mesi più caldi. Non solo le loro chiome creano un forte ombreggiamento, ma tramite il processo di “evapotraspirazione”, il corrispettivo arboreo della sudorazione umana, espellono acqua per raffreddarsi, che quando evapora riduce ulteriormente la temperatura dell’area circostante.</p>
+
+          <p fade>In corrispondenza delle zone maggiormente cementificate e con meno alberi, si creano più facilmente aree note come isole di calore, più calde rispetto alle circostanti zone limitrofe periferiche e rurali.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="text_highlight_container">
+      <p fade> <span>ISOLA DI CALORE </span> <img src="./images/content/arrow_lf.svg" alt="">In climatologia, con il termine <strong>isola di calore</strong> si intende un particolare fenomeno urbano in cui si creano aree più calde all'interno della città, in corrispondenza delle zone maggiormente antropizzate, rispetto alle circostanti aree periferiche e rurali. Il maggior accumulo di calore è determinato da una serie di concause, in interazione tra loro, tra le quali sono da annoverare la diffusa cementificazione, le superfici asfaltate che prevalgono nettamente rispetto alle aree verdi e le emissioni degli autoveicoli, degli impianti  e dei sistemi di riscaldamento o raffreddamento.</p>
+    </div>
+
+    <div class="line"></div>
+
+
+    <section class="map_section">
+      <div class="col_left_map">
+        <div class="col-container">
+          <div class="map_heading">
+            <img src="./images/content/map_icon.svg" alt="">
+            <h4>Le temperature nelle aree di Milano, Con e senza alberi</h4>
+          </div>
+
+            <div id="menu">
+            </div>
+
+          <div class="map_description">
+            <p>A Milano la temperatura media estiva superficiale, rilevata alle 10 del mattino, è di 33.9 °C in aree arborate, mentre raggiunge i 36.5 °C in aree non arborate: più aumenta l’estensione delle aree con bassa densità di copertura arborea nel nucleo metropolitano, più aumenta l’intensità dell’isola di calore urbana, e quindi il delta tra le temperature – che può arrivare fino a 6 gradi centigradi. Questo, di fatto, si traduce in un maggiore utilizzo di condizionatori, e quindi maggiori emissioni.</p>
+          </div>
+
+          <div class="map_info">
+            <p>La mappa di Milano è relativa alla temperatura superficiale calcolate da Landsat-8 con risoluzione 30m [valori medi estivi di giugno–agosto 2015/r21) </p>
+          </div>
+        </div>
+      </div>
+      <div id="map_second" class="col_right_map"></div>
+    </section>
+
+
+    <div class="line desktop"></div>
+      <div class="header_section">
+        <div class="header_container">
+          <div class="line_left">
+              <span></span>
+          </div>
+          <div class="header_title">
+            <h3>I dati sul verde urbano italiano: cosa c’è e cosa manca</h3>
+          </div>
+        </div>
+      </div>
+      <div class="line"></div>
+
+
+      <section class="text_section section">
+        <div class="text_container section_container">
+          <div class="paragraph">
+
+            <span class="droptext">
+              <img src="./images/content/parte-3.svg" alt="">
+            </span>
+
+            <p fade>Tanto è facile capire l’importanza degli alberi negli ecosistemi cittadini, quanto è difficile costruire una fotografia univoca del verde urbano in Italia. Manca un sistema di monitoraggio dettagliato nazionale e bisogna fare i conti con scarsa omogeneizzazione e lento aggiornamento dell’informazione statistica a livello comunale o anche solo di città metropolitane.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="line"></div>
+
+      <section class="map_section">
+        <div class="map_navigation">
+
+
+          <div class="tab">
+            <button class="tablinks active" city="roma">
+              ROMA
+            </button>
+            <button class="tablinks" city="milano" >
+              MILANO
+            </button>
+            <button class="tablinks" city="torino" >
+              TORINO
+            </button>
+            <button class="tablinks" city="bologna" >
+            BOLOGNA
+            </button>
+            <button class="tablinks" city="napoli" >
+              NAPOLI
+            </button>
+          </div>
+
+          <div class="tab_content_container">
+            <div id="roma" class="tabcontent" style="display: block;">
+              <div class="tab_heading">
+                <div class="tab_num">
+                  1
+                </div>
+                <h3>ROMA</h3>
+              </div>
+              <div class="tab_content">
+                <p>La sezione <a target="_blank" href="https://www.comune.roma.it/TERRITORIO/nic-gwt/">Geo Dati</a> del portale open data del Comune di Roma riporta solo le alberature dell’Ottavo Municipio, mentre risultano presenti nel catalogo, ma non scaricabili, i dati del Quattordicesimo Municipio. </p>
+              </div>
+            </div>
+
+            <div id="milano" class="tabcontent">
+              <div class="tab_heading">
+                <div class="tab_num">
+                  2
+                </div>
+                <h3>MILANO</h3>
+              </div>
+              <div class="tab_content">
+                <p>Il <a target="_blank" href="https://dati.comune.milano.it/it/">portale open data</a> del Comune di Milano dispone di un dataset con la localizzazione georeferenziata dei parchi e giardini sul territorio del Comune, mancano informazioni precise sui singoli alberi o alberature, che sono invece presenti nella mappa del <a target="_blank" href="https://geoportale.comune.milano.it/sit/patrimonio-del-verde/">patrimonio del verde</a>, ma non in formato open data.</p>
+              </div>
+            </div>
+
+            <div id="torino" class="tabcontent">
+              <div class="tab_heading">
+                <div class="tab_num">
+                  3
+                </div>
+                <h3>TORINO</h3>
+              </div>
+              <div class="tab_content">
+                <p>Il <a target="_blank" href="http://aperto.comune.torino.it/">portale aperTO</a>, che raccoglie gli open data prodotti sia dall’amministrazione comune di Torino, sia da enti terzi come società partecipate, raccoglie le alberate del territorio comunale e la copertura forestale del territorio provinciale.</p>
+              </div>
+            </div>
+
+            <div id="bologna" class="tabcontent">
+              <div class="tab_heading">
+                <div class="tab_num">
+                  4
+                </div>
+                <h3>BOLOGNA</h3>
+              </div>
+              <div class="tab_content">
+                <p>Il <a target="_blank" href="https://dati.comune.milano.it/it/">portale open data</a> del Comune di Bologna permette di scaricare dati georeferenziati sui singoli alberi, compresi di informazioni come altezza, specie arborea, dimora e distanza dai fabbricati. Sono inoltre presenti dataset delle aree verdi e delle siepi.</p>
+              </div>
+            </div>
+
+            <div id="napoli" class="tabcontent">
+              <div class="tab_heading">
+                <div class="tab_num">
+                  5
+                </div>
+                <h3>NAPOLI</h3>
+              </div>
+              <div class="tab_content">
+                <p>Il Comune di Napoli fornisce un dataset relativo alla <a target="_blank" href="https://www.comune.napoli.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/26127">carta della vegetazione del 1997</a>, ma non è presente alcun tipo di informazione su alberi o parchi pubblici. È possibile trovare solo <a target="_blank" href="https://nicoaliotta.carto.com/tables/censimento_alberi_napoli/public/map">dataset non ufficiali</a>.</p>
+              </div>
+            </div>
+          </div>
+
+
+
+
+        </div>
+
+        <div id="map_third" class="map_flyto"></div>
+      </section>
+      <div class="line"></div>
+
+      <section class="text_section section">
+        <div class="text_container section_container">
+          <div class="paragraph">
+            <p fade>Si tratta di una fotografia che andrà ad arricchirsi nel tempo e che non può ancora catturare il diverso attivismo delle città nelle iniziative di riforestazione urbana. Tra cui vale la pena citare il progetto “10.000 nuovi alberi” appena realizzato da Padova, con un investimento importante e una pianificazione di lungo termine che potrà fare la differenza.</p>
+
+            <p fade>Ma come a Padova, anche il ForestaMi di Milano che prevede tre milioni di nuovi alberi in tutta la città metropolitana potrà cambiare il volto della città. E ancora la piattaforma Forrest City per il crowdfunding a Prato, un progetto di forestazione urbana che coinvolge anche i cittadini, e i piani di Parma, Rimini e Mantova, aprono sempre di più a una diffusione di nuove giungle urbane. Specialmente se si riuscirà a tenere fede a quanto previsto nel Piano nazionale di ripresa e resilienza (PNRR).</p>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="number_illu" class="info_section section">
+        <div class="info_container section_container">
+          <div class="section_title_container">
+            <img src="./images/content/info_first_icon.svg" alt="">
+            <div class="section_title">
+              <h4>IL NUMERO DI ALBERI OGNI 100 ABITANTI  IN ALCUNI GRANDI CENTRI ITALIANI </h4>
+            </div>
+          </div>
+          <div class="illustration_container">
+            <img class="desktop" src="./images/content/number_illu.svg" alt="">
+            <img class="mobile" src="./images/content/number_illu_mobile.svg" alt="">
+
+          </div>
+        </div>
+      </section>
+
+
+      <div class="line"></div>
+        <div class="header_section">
+          <div class="header_container">
+            <div class="line_left">
+                <span></span>
+            </div>
+            <div class="header_title">
+              <h3>PNRR: panacea di tutti i problemi?</h3>
+            </div>
+          </div>
+        </div>
+        <div class="line"></div>
+
+
+        <section class="text_section section">
+          <div class="text_container section_container">
+            <div class="paragraph">
+
+              <span class="droptext">
+                <img src="./images/content/parte-4.svg" alt="">
+              </span>
+
+              <p><strong>Missione 2, Componente 4, Investimento 3.1.</strong> Questo è il percorso da seguire all’interno del PNRR, per trovare il piano di investimento per la “Tutela e valorizzazione del verde urbano ed extraurbano”. L’obiettivo fissato dal Governo è la piantumazione di 6.6 milioni di alberi entro il 2024 (di cui almeno 1.650.000 entro il 2022) per 6.600 ettari di foreste urbane (pari a 9 mila campi da calcio), con una dotazione finanziaria di 330 milioni di euro. Un piano certamente ambizioso: secondo gli ultimi dati ISTAT disponibili, nel 2019 gli interventi di forestazione urbana in Italia hanno interessato 1.100 ettari di terreno, un sesto di quanto previsto dal PNRR.</p>
+
+              <p>Non mancano però gli ostacoli. Primo fra tutti la difficoltà di approvvigionamento di un tale numero di alberi, che richiederà un’inedita collaborazione lungo tutta la catena di produzione in modo da rendere disponibile il materiale vegetale richiesto. Anche qualora si avesse successo nel piantare un tale numero di alberi, servirà poi un cambio di passo nel loro mantenimento. </p>
+            </div>
+          </div>
+        </section>
+
+        <div class="line"></div>
+
+
+        <section id="third_illu" class="info_section section">
+          <div class="info_container section_container">
+            <div class="section_title_container">
+              <img src="./images/content/info_first_icon.svg" alt="">
+              <div class="section_title">
+                <h4>gli Interventi di riforestazione  <br> urbana previsti dal PNR </h4>
+              </div>
+            </div>
+            <div class="illustration_container">
+              <img class="desktop" src="./images/content/info_third.svg" alt="">
+              <img class="mobile" src="./images/content/info_third_mobile.svg" alt="">
+
+            </div>
+          </div>
+        </section>
+
+        <div class="line"> </div>
+
+
+        <section class="text_section section">
+          <div class="text_container section_container">
+            <div class="paragraph">
+              <p>Il PNRR sembra confermare questa tendenza: facendo i conti, non sembrano essere sufficienti i 50 euro messi a disposizione per ogni pianta. Questa cifra dovrebbe infatti coprire non solo i costi per il suo acquisto, ma anche quelli per il trasporto, la messa a dimora e la sua gestione e cura "per almeno i sette anni successivi alla realizzazione del rimboschimento".</p>
+
+              <p>Infine, tutto questo non basterà a creare degli ecosistemi sostenibili a meno di rivedere l’intera concezione del verde nelle nostre città. Gli alberi sono ancora troppo spesso considerati un arredo urbano, l’ultimo elemento da aggiungere alla fine di una pianificazione urbana. Dovrebbe accadere esattamente l’opposto, con un una visione ecosistemica del verde urbano e periurbano attorno a cui sviluppare la progettazione urbanistica. </p>
+            </div>
+          </div>
+        </section>
+
+
+    <div animate class="line"></div>
+
+    <section class="quote_section section">
+      <div class="quote_container section_container">
+
+        <div class="section_title_container">
+          <img src="./images/content/quote_icon.svg" alt="">
+          <div class="section_title">
+            <h4>Le parole di Francesco Ferrini</h4>
+            <p>Professore Arboricoltura / Università di Firenze</p>
+          </div>
+        </div>
+
+        <h2 class="last-quote">In Italia va molto di moda piantare e andarsene dopo  il taglio del nastro: bisognerebbe invece investire il doppio nella gestione della pianta rispetto al suo costo di messa a dimora</h2>
+      </div>
+    </section>
+
+    <div class="line"></div>
+
+    <section class="credits">
+      <div class="credit_container">
+        <ul>
+          <li><strong>Coordinamento</strong> Luca Salvioli</li>
+          <li><strong>Contenuti</strong> Dalk (Damiano Bacci) e Alberto Guidi</li>
+          <li><strong>Design director:</strong> Laura Cattaneo</li>
+          <li><strong>Design:</strong> Dalk (Luca Gorini)</li>
+          <li><strong>Sviluppo:</strong> Matteo Sacchi</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+    <footer>
+      <div class="footer_container">
+
+      </div>
+    </footer>
+
+  </body>
+</html>
