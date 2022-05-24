@@ -298,7 +298,7 @@ strong{
 
 .legenda_mobile{
   position: absolute;
-  bottom: 0;
+  bottom: $spacing;
   right: $spacing*2;
   width:30px !important;
 }
@@ -728,11 +728,19 @@ strong{
 
     .map_navigation{
       width:100%;
+      padding: 0 $spacing/2;
+      border-right:0;
+      .tab_content_container{
+        padding-bottom: $spacing;
+      }
     }
     .map_flyto{
       width:100%;
       height: 100vh;
     }
+  }
+  #map_third{
+    height: 60vh;
   }
 
 

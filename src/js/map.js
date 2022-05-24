@@ -4,6 +4,11 @@ import * as data from './dataset-verde-abitante.json';
 import * as alberi from './alberi_p5.json';
 import * as parchi from './parchi.json';
 
+let mobile = false;
+if(window.innerWidth < 900){
+  mobile = true;
+}
+
 
 // first map
 var map = new mapboxgl.Map({
@@ -246,7 +251,11 @@ map_tre.on('load', () => {
       item.addEventListener("click", function(e){
         let città = item.getAttribute("city")
         openCity(e, città)
-        map_tre.flyTo(chapters[città])
+        if(mobile){
+          map_tre.jumpTo(chapters[città])
+        }else{
+          map_tre.flyTo(chapters[città])
+        }
       })
     });
 
