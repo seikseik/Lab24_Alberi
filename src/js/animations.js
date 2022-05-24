@@ -19,6 +19,17 @@ hr.forEach((el, i) => {
 });
 
 
+const lines = gsap.utils.toArray(".animate");
+
+ScrollTrigger.batch(lines, {
+  onEnter: lines => {
+    gsap.set(lines, {transformOrigin:"left"})
+    gsap.fromTo(lines, {scaleX: 0}, {duration: 0.9, scaleX: 1, ease: "circ.out", stagger: 0.18, opacity: 1});
+  },
+  once: true
+});
+
+
 // // fade up
 const fadeUp = gsap.utils.toArray("[fade]");
 fadeUp.forEach((el, i) => {
@@ -33,8 +44,15 @@ fadeUp.forEach((el, i) => {
 
 
 
-let h = document.querySelector(".hero").offsetHeight;
-let arrow = document.querySelector(".scroll");
-arrow.addEventListener("click", function(){
-  gsap.to(window, {duration: 1, scrollTo: h});
+// let h = document.querySelector(".hero").offsetHeight;
+// let arrow = document.querySelector(".scroll");
+// arrow.addEventListener("click", function(){
+//   gsap.to(window, {duration: 1, scrollTo: h});
+// });
+
+
+let scrolltop = document.querySelector(".scrolltop");
+scrolltop.addEventListener("click", function(){
+  console.log("ciao")
+  gsap.to(window, {duration: 1, scrollTo: 0});
 });

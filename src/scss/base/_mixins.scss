@@ -65,3 +65,42 @@
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
 }
+
+
+@mixin gradient_text_animation{
+  background: linear-gradient(232deg, #07a76f, #8eca45);
+  background-size: 400% 400%;
+  -webkit-animation: gradientAnimation 7s ease infinite;
+  -moz-animation: gradientAnimation 7s ease infinite;
+  animation: gradientAnimation 7s ease infinite;
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+
+@mixin gradient_animation {
+    background: linear-gradient(232deg, #07a76f, #8eca45);
+    background-size: 400% 400%;
+    -webkit-animation: gradientAnimation 7s ease infinite;
+    -moz-animation: gradientAnimation 7s ease infinite;
+    animation: gradientAnimation 7s ease infinite;
+}
+
+@-webkit-keyframes gradientAnimation {
+    0%{background-position:91% 0%}
+    50%{background-position:10% 100%}
+    100%{background-position:91% 0%}
+}
+@-moz-keyframes gradientAnimation {
+    0%{background-position:91% 0%}
+    50%{background-position:10% 100%}
+    100%{background-position:91% 0%}
+}
+@keyframes gradientAnimation {
+    0%{background-position:91% 0%}
+    50%{background-position:10% 100%}
+    100%{background-position:91% 0%}
+}

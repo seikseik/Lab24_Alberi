@@ -124,11 +124,13 @@ map_due.on('idle', () => {
     const link = document.createElement('a');
     link.id = id;
     link.href = '#';
-    link.textContent = id;
+    link.textContent = "temperatura";
     link.className = 'active';
 
     link.onclick = function(e) {
-      const clickedLayer = this.textContent;
+
+      const clickedLayer = this.id;
+
       e.preventDefault();
       e.stopPropagation();
 
@@ -136,7 +138,9 @@ map_due.on('idle', () => {
         clickedLayer,
         'visibility'
       );
-      if (visibility === 'visible') {
+
+
+      if (visibility === 'visible' || visibility == undefined) {
         map_due.setLayoutProperty(clickedLayer, 'visibility', 'none');
         this.className = '';
       } else {
@@ -234,8 +238,6 @@ map_tre.on('load', () => {
   }, "country-label");
 
   map_tre.addControl(new mapboxgl.NavigationControl());
-
-
 
 
   let tabs = document.querySelectorAll(".tablinks");

@@ -16,7 +16,11 @@ strong{
   height: 1px;
   @include gradient;
   width:100%;
+  &.animate{
+    opacity: 0;
+  }
 }
+
 
 .hero{
   height: 100vh;
@@ -92,7 +96,7 @@ strong{
 }
 
 .hero_heading_title_container{
-  @include gradient_text;
+  @include gradient_text_animation;
   h2{
     font-size: $size_title;
     margin-bottom: $spacing*2;
@@ -110,6 +114,18 @@ strong{
   bottom: $spacing;
   right: $spacing;
   transition: .2s ease;
+  z-index: 999;
+  cursor: pointer;
+  &:hover{
+    rect{fill:$green;}
+  }
+}
+.scrolltop{
+  position: fixed;
+  bottom: $spacing;
+  right: $spacing;
+  transition: .2s ease;
+  transform: rotate(180DEG);
   z-index: 999;
   cursor: pointer;
   &:hover{
@@ -187,7 +203,7 @@ strong{
   margin: 0 auto 0 $spacing_left_highlight;
   border-radius: 10px;
   max-width: 100%;
-  @include gradient;
+  @include gradient_animation;
   p{
     width: $text_container;
     max-width: 100%;
@@ -263,6 +279,7 @@ strong{
 
 
 #first_illu{
+  position: relative;
   .section_title_container{
     img{
       min-width:50px;
@@ -277,6 +294,13 @@ strong{
       height: auto;
     }
   }
+}
+
+.legenda_mobile{
+  position: absolute;
+  bottom: 0;
+  right: $spacing*2;
+  width:30px !important;
 }
 
 #second_illu{
@@ -346,6 +370,8 @@ strong{
 
 #temperatura_super{
   position: absolute;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   left: $spacing;
   top:$spacing;
   padding: $spacing/2 $spacing;
@@ -359,6 +385,7 @@ strong{
     color: $white;
   }
 }
+
 
 
 .map_heading{
@@ -396,7 +423,7 @@ strong{
   justify-content: center;
   align-items: center;
   padding: $spacing*6 $spacing;
-  @include gradient;
+  @include gradient_animation;
   li{
     margin-bottom: $spacing;
     color:white;
@@ -509,6 +536,22 @@ strong{
   from {opacity: 0;}
   to {opacity: 1;}
 }
+
+
+@media screen and (max-width: 1060px) {
+  .text_highlight_container{
+    width: 820px;
+    margin: 0 auto 0 calc(15vw - 10px);
+    p{
+      margin-left: 10px;
+    }
+  }
+
+  #first_illu .illustration_container img{
+    width:100%;
+  }
+}
+
 
 .mobile{display: none;}
 .desktop{display: block;}
@@ -633,9 +676,15 @@ strong{
     }
   }
 
+
+  #number_illu .illustration_container img{
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
   #first_illu .illustration_container img{
     width:100%;
-    max-width: 500px;
+    max-width: 400px;
     margin: 0 auto;
   }
   #second_illu .illustration_container{
