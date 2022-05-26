@@ -1,173 +1,245 @@
 <!DOCTYPE html>
 <html lang="it" dir="ltr">
+
   <head>
     <meta charset="utf-8">
     <link rel="apple-touch-icon" sizes="57x57" href="http://c2.res.24o.it/ico/apple-touch-icon-57x57.png">
-  	<link rel="apple-touch-icon" sizes="60x60" href="http://c2.res.24o.it/ico/apple-touch-icon-60x60.png">
-  	<link rel="apple-touch-icon" sizes="72x72" href="http://c2.res.24o.it/ico/apple-touch-icon-72x72.png">
-  	<link rel="apple-touch-icon" sizes="76x76" href="http://c2.res.24o.it/ico/apple-touch-icon-76x76.png">
-  	<link rel="apple-touch-icon" sizes="114x114" href="http://c2.res.24o.it/ico/apple-touch-icon-114x114.png">
-  	<link rel="apple-touch-icon" sizes="120x120" href="http://c2.res.24o.it/ico/apple-touch-icon-120x120.png">
-  	<link rel="apple-touch-icon" sizes="144x144" href="http://c2.res.24o.it/ico/apple-touch-icon-144x144.png">
-  	<link rel="apple-touch-icon" sizes="152x152" href="http://c2.res.24o.it/ico/apple-touch-icon-152x152.png">
-  	<link rel="apple-touch-icon" sizes="180x180" href="http://c2.res.24o.it/ico/apple-touch-icon-180x180.png">
-    <title>Lab 24 - Alberi</title>
+    <link rel="apple-touch-icon" sizes="60x60" href="http://c2.res.24o.it/ico/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="http://c2.res.24o.it/ico/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="http://c2.res.24o.it/ico/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="http://c2.res.24o.it/ico/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="http://c2.res.24o.it/ico/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="http://c2.res.24o.it/ico/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="http://c2.res.24o.it/ico/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://c2.res.24o.it/ico/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="http://c2.res.24o.it/ico/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="http://c2.res.24o.it/ico/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="http://c2.res.24o.it/ico/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="http://c2.res.24o.it/ico/favicon-16x16.png" sizes="16x16">
+
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+    <!-- Primary Meta Tags -->
+    <title>L'albero, risorsa e sfida per le città</title>
+    <meta name="title" content="L'albero, risorsa e sfida per le città">
+    <meta name="description"
+      content="Come e perché gli alberi, e il verde urbano in generale, rappresentano uno degli elementi fondamentali per lo sviluppo delle città in ottica sostenibile — partendo da un'analisi dei dati e passando per gli obiettivi del PNRR">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://metatags.io/">
+    <meta property="og:title" content="L'albero, risorsa e sfida per le città">
+    <meta property="og:description"
+      content="Come e perché gli alberi, e il verde urbano in generale, rappresentano uno degli elementi fondamentali per lo sviluppo delle città in ottica sostenibile — partendo da un'analisi dei dati e passando per gli obiettivi del PNRR">
+    <meta property="og:image" content="./meta.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://metatags.io/">
+    <meta property="twitter:title" content="L'albero, risorsa e sfida per le città">
+    <meta property="twitter:description"
+      content="Come e perché gli alberi, e il verde urbano in generale, rappresentano uno degli elementi fondamentali per lo sviluppo delle città in ottica sostenibile — partendo da un'analisi dei dati e passando per gli obiettivi del PNRR">
+    <meta property="twitter:image" content="./meta.png">
   <script defer src="js/app.js"></script><link href="css/app.css" rel="stylesheet"></head>
+
   <body>
 
 
-  <section class="hero">
-    <img class="background_image full" src="./images/content/hero_full.png" alt="">
-    <div class="hero_heading">
-      <div class="hero_heading_container">
-        <div class="hero_heading_top">
-          <div class="line animate"></div>
-          <div class="row">
-            <span>VERDE URBANO</span>
+    <section class="hero">
+      <img class="background_image full" src="./images/content/hero_full.png" alt="">
+      <div class="hero_heading">
+        <div class="hero_heading_container">
+          <div class="hero_heading_top">
+            <div class="line animate"></div>
+            <div class="row">
+              <span>VERDE URBANO</span>
+            </div>
+            <div class="line animate"></div>
+            <div class="row">
+              <p>a cura di <strong>Dalk + Alberto Guidi + Lab24</strong> </p>
+            </div>
+            <div class="line animate"></div>
+            <div class="row">
+              <p>tempo di lettura</p>
+
+              <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24.4947" cy="24.4949" r="20" transform="rotate(15 24.4947 24.4949)" fill="url(#paint0_linear_360_123)" />
+                <path
+                  d="M16.1724 19.1759C17.6027 18.9768 19.0229 18.8721 20.433 18.8617L21.0131 19.1081C20.6926 20.0777 20.3739 21.154 20.0569 22.3369L19.3199 25.0875C19.097 25.9195 18.9688 26.4432 18.9353 26.6587C18.9018 26.8742 18.9256 27.0231 19.0067 27.1055L20.3727 27.6444L20.168 28.4085L14.2847 26.832L14.4849 26.0849L16.1258 26.379C16.2428 26.3497 16.3436 26.2342 16.428 26.0324C16.518 25.832 16.6799 25.2961 16.9134 24.4245L17.5481 22.0559C17.7877 21.1617 17.9851 20.5382 18.1402 20.1855C17.5191 20.104 16.8451 19.9931 16.1183 19.853L16.1724 19.1759ZM22.5852 24.3792C22.9582 22.9869 23.7219 21.9935 24.876 21.3989C26.0317 20.7986 27.1953 20.6555 28.3669 20.9694C29.5724 21.2924 30.5157 21.994 31.1968 23.0743C31.8851 24.1505 32.0397 25.396 31.6605 26.8109C31.2875 28.2032 30.5373 29.2033 29.4099 29.8111C28.2897 30.4148 27.1042 30.5491 25.8534 30.2139C24.6252 29.8848 23.6791 29.1824 23.015 28.1067C22.3523 27.0253 22.2091 25.7828 22.5852 24.3792ZM25.1575 25.0685C24.8618 26.1721 24.7769 27.1229 24.9027 27.921C25.0358 28.7149 25.4447 29.2036 26.1295 29.3871C26.803 29.5676 27.3895 29.3486 27.8888 28.7302C28.3896 28.1062 28.7894 27.2366 29.0882 26.1217C29.393 24.9841 29.481 24.0219 29.3521 23.2352C29.2232 22.4484 28.8107 21.9618 28.1145 21.7753C27.4523 21.5978 26.8657 21.8289 26.3547 22.4684C25.8493 23.1094 25.4502 23.9761 25.1575 25.0685ZM34.7387 21.1299C34.8418 20.745 35.0632 20.4282 35.4028 20.1795C35.7424 19.9308 36.0905 19.8542 36.4471 19.9498C36.9112 20.0741 37.286 20.3505 37.5716 20.7788C37.8644 21.2031 37.9486 21.6472 37.8242 22.1113C37.4891 23.3621 36.3363 24.2573 34.3658 24.797L34.1318 24.0063C35.1293 23.6792 35.6842 23.3062 35.7965 22.8873C35.8268 22.7741 35.8052 22.6622 35.7318 22.5515C35.6655 22.4367 35.4967 22.2854 35.2256 22.0974C34.8115 21.7863 34.6493 21.4638 34.7387 21.1299Z"
+                  fill="#F9F9F9" />
+                <defs>
+                  <linearGradient id="paint0_linear_360_123" x1="-3.51362" y1="-5.19291" x2="54.8995" y2="-4.92302" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#07A76F" />
+                    <stop offset="1" stop-color="#8ECA45" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="line animate"></div>
           </div>
-          <div class="line animate"></div>
-          <div class="row">
-            <p>a cura di <strong>Dalk + Alberto Guidi + Lab24</strong> </p>
-          </div>
-          <div class="line animate"></div>
-          <div class="row">
-            <p>tempo di lettura</p>
 
-            <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="24.4947" cy="24.4949" r="20" transform="rotate(15 24.4947 24.4949)" fill="url(#paint0_linear_360_123)"/>
-              <path
-                d="M16.1724 19.1759C17.6027 18.9768 19.0229 18.8721 20.433 18.8617L21.0131 19.1081C20.6926 20.0777 20.3739 21.154 20.0569 22.3369L19.3199 25.0875C19.097 25.9195 18.9688 26.4432 18.9353 26.6587C18.9018 26.8742 18.9256 27.0231 19.0067 27.1055L20.3727 27.6444L20.168 28.4085L14.2847 26.832L14.4849 26.0849L16.1258 26.379C16.2428 26.3497 16.3436 26.2342 16.428 26.0324C16.518 25.832 16.6799 25.2961 16.9134 24.4245L17.5481 22.0559C17.7877 21.1617 17.9851 20.5382 18.1402 20.1855C17.5191 20.104 16.8451 19.9931 16.1183 19.853L16.1724 19.1759ZM22.5852 24.3792C22.9582 22.9869 23.7219 21.9935 24.876 21.3989C26.0317 20.7986 27.1953 20.6555 28.3669 20.9694C29.5724 21.2924 30.5157 21.994 31.1968 23.0743C31.8851 24.1505 32.0397 25.396 31.6605 26.8109C31.2875 28.2032 30.5373 29.2033 29.4099 29.8111C28.2897 30.4148 27.1042 30.5491 25.8534 30.2139C24.6252 29.8848 23.6791 29.1824 23.015 28.1067C22.3523 27.0253 22.2091 25.7828 22.5852 24.3792ZM25.1575 25.0685C24.8618 26.1721 24.7769 27.1229 24.9027 27.921C25.0358 28.7149 25.4447 29.2036 26.1295 29.3871C26.803 29.5676 27.3895 29.3486 27.8888 28.7302C28.3896 28.1062 28.7894 27.2366 29.0882 26.1217C29.393 24.9841 29.481 24.0219 29.3521 23.2352C29.2232 22.4484 28.8107 21.9618 28.1145 21.7753C27.4523 21.5978 26.8657 21.8289 26.3547 22.4684C25.8493 23.1094 25.4502 23.9761 25.1575 25.0685ZM34.7387 21.1299C34.8418 20.745 35.0632 20.4282 35.4028 20.1795C35.7424 19.9308 36.0905 19.8542 36.4471 19.9498C36.9112 20.0741 37.286 20.3505 37.5716 20.7788C37.8644 21.2031 37.9486 21.6472 37.8242 22.1113C37.4891 23.3621 36.3363 24.2573 34.3658 24.797L34.1318 24.0063C35.1293 23.6792 35.6842 23.3062 35.7965 22.8873C35.8268 22.7741 35.8052 22.6622 35.7318 22.5515C35.6655 22.4367 35.4967 22.2854 35.2256 22.0974C34.8115 21.7863 34.6493 21.4638 34.7387 21.1299Z"
-                fill="#F9F9F9"/>
-              <defs>
-                <linearGradient id="paint0_linear_360_123" x1="-3.51362" y1="-5.19291" x2="54.8995" y2="-4.92302" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#07A76F"/>
-                  <stop offset="1" stop-color="#8ECA45"/>
-                </linearGradient>
-              </defs>
-            </svg>
-
-
-          </div>
-          <div class="line animate"></div>
-        </div>
-
-        <div class="hero_heading_title_container">
-          <h2>L'albero, risorsa e sfida per le città</h2>
-          <p>Come e perché gli alberi, e il verde urbano in generale, rappresentano uno degli elementi fondamentali per lo sviluppo delle città in ottica sostenibile — partendo da un'analisi dei dati e passando per gli obiettivi del PNRR</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="scrolltop">
-      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="30" y="30" width="30" height="30" rx="4" transform="rotate(-180 30 30)" fill="#1E2528"/>
-      <path d="M15 22L15 8M15 22L8.5 14M15 22L21.5 14" stroke="#F9F9F9" stroke-width="2" stroke-linejoin="round"/>
-      </svg>
-    </div>
-
-  </section>
-
-  <main>
-
-  <div class="line desktop"></div>
-    <div class="header_section">
-      <div class="header_container">
-        <div class="line_left">
-            <span></span>
-        </div>
-        <div class="header_title">
-          <h3>il verde urbano: protagonista nel futuro delle città</h3>
-        </div>
-      </div>
-    </div>
-    <div class="line desktop"></div>
-
-
-    <section class="text_section section">
-      <div class="text_container section_container">
-        <div class="paragraph">
-          <p fade>
-          <span class="droptext">
-            <img src="./images/content/parte-1.svg" alt="">
-          </span>
-          <strong>Le città stanno diventando sempre più centrali</strong> e importanti nella vita di molte persone. Saranno il campo principale dove giocheremo le sfide del futuro: la sostenibilità del nostro stile di vita, la lotta al cambiamento climatico, la ricerca del benessere individuale attraverso lo sviluppo e le innovazioni tecnologiche. Uno dei temi fondamentali, alla luce del secolare fenomeno di urbanizzazione, riguarda l’utilizzo dello spazio urbano, pubblico e privato.</p>
-          <p fade>È infatti cresciuta la consapevolezza su fenomeni come la dispersione e la rigenerazione urbana, il consumo del suolo, la mobilità sostenibile, l’accessibilità, la qualità dell’aria e dei servizi.</p>
-        </div>
-      </div>
-    </section>
-
-  <div animate class="line"></div>
-
-    <section class="quote_section section">
-      <div class="quote_container section_container">
-
-        <div class="section_title_container">
-          <img src="./images/content/quote_icon.svg" alt="">
-          <div class="section_title">
-            <h4>Le parole di Ban Ki-moon </h4>
-            <p>Ex Segretario Generale dell’ONU</p>
+          <div class="hero_heading_title_container">
+            <h2>L'albero, <br> risorsa e sfida <br> per le città</h2>
+            <p>Come e perché gli alberi, e il verde urbano in generale, rappresentano uno degli elementi fondamentali per lo sviluppo delle città in ottica sostenibile — partendo da un'analisi dei dati e passando per gli obiettivi del PNRR</p>
           </div>
         </div>
-
-        <h2>Le città sono il luogo in cui la battaglia per lo sviluppo sostenibile sarà vinta, o persa</h2>
       </div>
+
+      <div class="scrolltop">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="30" y="30" width="30" height="30" rx="4" transform="rotate(-180 30 30)" fill="#1E2528" />
+          <path d="M15 22L15 8M15 22L8.5 14M15 22L21.5 14" stroke="#F9F9F9" stroke-width="2" stroke-linejoin="round" />
+        </svg>
+      </div>
+
     </section>
 
-    <div animate class="line"></div>
+    <main>
 
-
-    <section class="text_section section">
-      <div class="text_container section_container">
-        <div class="paragraph">
-          <p fade>Un elemento in particolare fa da sfondo alla ricerca di qualità della vita in città: il verde urbano. Che sia un parco o un singolo albero, quando si progetta un nuovo spazio o la rigenerazione di un’area già esistente è necessario trovare la giusta collocazione per il verde, che dev’essere accessibile in maniera semplice e diretta.</p>
-
-          <p fade>«Riconoscendo l'urgenza di combattere il degrado del suolo e creare nuove vasche di assorbimento del carbonio, condividiamo l'obiettivo ambizioso di piantare collettivamente 1.000 miliardi di alberi entro il 2030». Questo è quanto si legge nella dichiarazione finale del vertice del G20 di Roma dello scorso ottobr: un impegno che per l’Unione Europea si è tradotto nella “Strategia europea per la biodiversità al 2030”, che mira a piantare almeno 3 miliardi di alberi supplementari entro la fine del decennio.</p>
-        </div>
-      </div>
-    </section>
-
-    <div animate class="line"></div>
-
-    <section id="first_illu" class="info_section section">
-      <div class="info_container section_container">
-        <div class="section_title_container">
-          <img src="./images/content/info_first_icon.svg" alt="">
-          <div class="section_title">
-            <h4>IL NUMERO DI PERSONE CHE VIVONO NEI CENTRI URBANI AUMENTERà, SUPERANDO I 6Mld NEL 2050 </h4>
-          </div>
-        </div>
-        <div  class="illustration_container">
-          <img class="desktop" src="./images/content/info_first.svg" alt="">
-          <img class="mobile" src="./images/content/info_first_mobile.svg" alt="">
-          <img class="mobile legenda_mobile" src="./images/content/info_first_mobile_legenda.svg" alt="">
-
-        </div>
-      </div>
-    </section>
-
-    <div animate class="line"></div>
-
-
-    <section class="text_section section">
-      <div class="text_container section_container">
-        <div class="paragraph">
-          <p fade>Particolare importanza viene data al tema delle infrastrutture verdi nelle aree urbane e periurbane, invitando i centri europei di almeno 20mila abitanti a elaborare entro la fine del 2021 piani ambiziosi di inverdimento urbano, che includano cioè misure intese a creare in città boschi, parchi e giardini accessibili e ricchi di biodiversità.</p>
-
-          <p fade>Secondo ASviS, l’alleanza italiana per lo sviluppo sostenibile, in Italia sono 8 su 109 (il 7%) i Comuni capoluogo di provincia che dichiarano di aver elaborato un Piano del verde. E anche in termini di metri quadrati di verde urbano accessibile per abitante, mediamente le città italiane performano peggio di quelle del Nord Europa. Calcolando infatti solo le superfici destinate a verde attrezzato e aree sportive all’aperto appena il 17% dei Comuni capoluogo di provincia supera la soglia dei 9 m2/ab – minimo standard raccomandato dall'Organizzazione Mondiale della Sanità e metà dell’attuale media europea.</p>
-        </div>
-      </div>
-    </section>
-
-  <div class="line desktop"></div>
-    <section id="map" class="map_section"> </section>
-
-
-    <div class="line"></div>
+      <div class="line desktop"></div>
       <div class="header_section">
         <div class="header_container">
           <div class="line_left">
-              <span></span>
+            <span></span>
+          </div>
+          <div class="header_title">
+            <h3>il verde urbano: protagonista nel futuro delle città</h3>
+          </div>
+        </div>
+      </div>
+      <div class="line desktop"></div>
+
+
+      <section class="text_section section">
+        <div class="text_container section_container">
+          <div class="paragraph">
+            <p fade>
+              <span class="droptext">
+                <img src="./images/content/parte-1.svg" alt="">
+              </span>
+              <strong>Le città stanno diventando sempre più centrali</strong> e importanti nella vita di molte persone. Saranno il campo principale dove giocheremo le sfide del futuro: la sostenibilità del nostro stile di vita, la lotta al
+              cambiamento climatico, la ricerca del benessere individuale attraverso lo sviluppo e le innovazioni tecnologiche. Uno dei temi fondamentali, alla luce del secolare fenomeno di urbanizzazione, riguarda l’utilizzo dello spazio urbano,
+              pubblico e privato.</p>
+            <p fade>È infatti cresciuta la consapevolezza su fenomeni come la dispersione e la rigenerazione urbana, il consumo del suolo, la mobilità sostenibile, l’accessibilità, la qualità dell’aria e dei servizi.</p>
+          </div>
+        </div>
+      </section>
+
+      <div animate class="line"></div>
+
+      <section class="quote_section section">
+        <div class="quote_container section_container">
+
+          <div class="section_title_container">
+            <img src="./images/content/quote_icon.svg" alt="">
+            <div class="section_title">
+              <h4>Le parole di Ban Ki-moon </h4>
+              <p>Ex Segretario Generale dell’ONU</p>
+            </div>
+          </div>
+
+          <h2>Le città sono il luogo in cui la battaglia per lo sviluppo sostenibile sarà vinta, o persa</h2>
+        </div>
+      </section>
+
+      <div animate class="line"></div>
+
+
+      <section class="text_section section">
+        <div class="text_container section_container">
+          <div class="paragraph">
+            <p fade>Un elemento in particolare fa da sfondo alla ricerca di qualità della vita in città: il verde urbano. Che sia un parco o un singolo albero, quando si progetta un nuovo spazio o la rigenerazione di un’area già esistente è
+              necessario trovare la giusta collocazione per il verde, che dev’essere accessibile in maniera semplice e diretta.</p>
+
+            <p fade>«Riconoscendo l'urgenza di combattere il degrado del suolo e creare nuove vasche di assorbimento del carbonio, condividiamo l'obiettivo ambizioso di piantare collettivamente 1.000 miliardi di alberi entro il 2030». Questo è quanto
+              si legge nella dichiarazione finale del vertice del G20 di Roma dello scorso ottobr: un impegno che per l’Unione Europea si è tradotto nella “Strategia europea per la biodiversità al 2030”, che mira a piantare almeno 3 miliardi di
+              alberi supplementari entro la fine del decennio.</p>
+          </div>
+        </div>
+      </section>
+
+      <div animate class="line"></div>
+
+      <section id="first_illu" class="info_section section">
+        <div class="info_container section_container">
+          <div class="section_title_container">
+            <img src="./images/content/info_first_icon.svg" alt="">
+            <div class="section_title">
+              <h4>IL NUMERO DI PERSONE CHE VIVONO NEI CENTRI URBANI AUMENTERà, SUPERANDO I 6Mld NEL 2050 </h4>
+            </div>
+          </div>
+          <div class="illustration_container">
+            <img class="desktop" src="./images/content/info_first.svg" alt="">
+            <img class="mobile" src="./images/content/info_first_mobile.svg" alt="">
+            <img class="mobile legenda_mobile" src="./images/content/info_first_mobile_legenda.svg" alt="">
+
+          </div>
+        </div>
+      </section>
+
+      <div animate class="line"></div>
+
+
+      <section class="text_section section">
+        <div class="text_container section_container">
+          <div class="paragraph">
+            <p fade>Particolare importanza viene data al tema delle infrastrutture verdi nelle aree urbane e periurbane, invitando i centri europei di almeno 20mila abitanti a elaborare entro la fine del 2021 piani ambiziosi di inverdimento urbano,
+              che includano cioè misure intese a creare in città boschi, parchi e giardini accessibili e ricchi di biodiversità.</p>
+
+            <p fade>Secondo ASviS, l’alleanza italiana per lo sviluppo sostenibile, in Italia sono 8 su 109 (il 7%) i Comuni capoluogo di provincia che dichiarano di aver elaborato un Piano del verde. E anche in termini di metri quadrati di verde
+              urbano accessibile per abitante, mediamente le città italiane performano peggio di quelle del Nord Europa. Calcolando infatti solo le superfici destinate a verde attrezzato e aree sportive all’aperto appena il 17% dei Comuni capoluogo
+              di provincia supera la soglia dei 9 m2/ab – minimo standard raccomandato dall'Organizzazione Mondiale della Sanità e metà dell’attuale media europea.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="line desktop"></div>
+
+      <section id="first_map" class="map_section">
+        <div class="col_left_map">
+          <div class="col-container">
+            <div class="map_heading">
+              <img src="./images/content/info_first_icon.svg" alt="">
+              <h4>I m2 per abitante di verde pubblico nelle città europee</h4>
+            </div>
+
+            <div class="map_description">
+              <p>La mappa mostra come nell’Europa centrale e in quella settentrionale le citta presentano tendenzialmente maggiore verde pubblico, in termini di metri quadrati per abitante, rispetto ai centri urbani dell’Europa meridionale.</p>
+              <img class="desktop" src="./images/content/legenda_mappa_1.svg" alt="">
+              <img class="mobile" src="./images/content/legenda_mappa_1_mobile.svg" alt="">
+
+            </div>
+
+            <div class="map_info">
+              <svg width="118" height="16" viewBox="0 0 118 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M58.2 9.66V3.589H56.666V9.595C56.666 10.414 56.211 10.83 55.639 10.83C55.093 10.83 54.651 10.427 54.43 9.452L53.156 9.829C53.442 11.233 54.417 12.169 55.808 12.169C57.147 12.169 58.2 11.285 58.2 9.66ZM61.7569 4.876H63.1479C64.1359 4.876 64.7989 5.435 64.7989 6.267C64.7989 7.164 64.1229 7.749 63.1479 7.749H61.7569V4.876ZM61.7569 12V9.036H63.1219C63.3039 9.036 63.4859 9.023 63.6679 9.01L65.2019 12H66.9049L65.0589 8.568C65.8909 8.087 66.3849 7.268 66.3849 6.254C66.3849 4.668 65.1109 3.589 63.2259 3.589H60.2229V12H61.7569ZM75.0735 9.777L73.7475 9.283C73.3835 10.193 72.5125 10.83 71.6805 10.83C70.2895 10.83 69.2885 9.608 69.2885 7.879C69.2885 6.072 70.2895 4.772 71.6805 4.772C72.4735 4.772 73.2925 5.409 73.6435 6.267L75.0345 5.76C74.4885 4.408 73.1105 3.446 71.6025 3.446C69.3145 3.446 67.6635 5.318 67.6635 7.892C67.6635 10.388 69.3015 12.169 71.6025 12.169C73.1235 12.169 74.5795 11.168 75.0735 9.777ZM77.9899 14.457L78.8999 14.847L84.1909 2.77L83.2809 2.393L77.9899 14.457ZM87.5495 10.869V12H93.9195V10.622H89.6685L91.5275 9.01C92.4245 8.243 93.5685 7.203 93.5685 5.812C93.5685 4.408 92.3205 3.42 90.7085 3.42C89.0705 3.42 87.9915 4.434 87.4975 5.656L88.6415 6.163C88.9535 5.396 89.6425 4.72 90.5525 4.72C91.3065 4.72 91.9435 5.188 91.9435 5.968C91.9435 6.735 91.3455 7.32 90.3445 8.256L87.5495 10.869ZM102.206 7.788C102.206 5.188 100.75 3.42 98.618 3.42C96.473 3.42 95.017 5.188 95.017 7.788C95.017 10.401 96.473 12.169 98.618 12.169C100.75 12.169 102.206 10.401 102.206 7.788ZM96.655 7.788C96.655 5.955 97.435 4.746 98.618 4.746C99.788 4.746 100.581 5.955 100.581 7.788C100.581 9.634 99.788 10.843 98.618 10.843C97.435 10.843 96.655 9.634 96.655 7.788ZM106.32 3.589L103.824 4.577L104.278 5.799L106.034 5.188V10.687H104.045V12H109.362V10.687H107.568V3.589H106.32ZM114.32 7.84C113.293 7.853 112.552 7.229 112.552 6.293C112.552 5.383 113.228 4.707 114.216 4.707C115.23 4.707 115.958 5.396 116.205 6.657C115.854 7.346 115.113 7.814 114.32 7.84ZM117.908 7.684C117.908 5.123 116.374 3.407 114.177 3.407C112.305 3.407 110.914 4.681 110.914 6.358C110.914 8.009 112.318 9.127 113.982 9.088C114.944 9.049 115.815 8.607 116.309 7.957C116.231 9.842 115.425 10.934 114.06 10.934C113.189 10.934 112.435 10.492 111.954 9.79L110.888 10.479C111.577 11.571 112.747 12.169 114.086 12.169C116.4 12.169 117.908 10.323 117.908 7.684Z"
+                  fill="#C5C5C5" />
+                <path d="M53 13.3H118.35V13.95H53V13.3Z" fill="#C5C5C5" />
+                <path
+                  d="M20.902 8.62V7.359H17.587V4.876H21.799V3.589H16.053V12H17.587V8.62H20.902ZM28.6829 8.763C28.6829 6.787 27.3309 5.357 25.4589 5.357C23.5739 5.357 22.2089 6.787 22.2089 8.763C22.2089 10.739 23.5739 12.169 25.4589 12.169C27.3309 12.169 28.6829 10.739 28.6829 8.763ZM23.7169 8.763C23.7169 7.463 24.4449 6.514 25.4589 6.514C26.4599 6.514 27.1749 7.463 27.1749 8.763C27.1749 10.063 26.4599 10.999 25.4589 10.999C24.4449 10.999 23.7169 10.063 23.7169 8.763ZM35.7206 12V7.762C35.7206 6.358 34.7586 5.357 33.5106 5.357C32.6136 5.357 31.8596 5.864 31.4306 6.475V5.526H30.0526V12H31.4826V7.359C31.8336 6.904 32.4446 6.54 33.0816 6.54C33.7836 6.54 34.2906 7.06 34.2906 7.866V12H35.7206ZM41.3165 11.974V10.817C41.0695 10.895 40.6535 10.973 40.2635 10.973C39.4965 10.973 39.1845 10.609 39.1845 10.011V6.683H41.2905V5.526H39.1845V3.953H37.7545V5.526H36.7795V6.683H37.7545V10.31C37.7545 11.493 38.5475 12.182 39.9775 12.182C40.4585 12.182 41.0175 12.078 41.3165 11.974ZM47.7998 10.505L46.7078 10.076C46.3958 10.687 45.8238 11.051 45.1998 11.051C44.2378 11.051 43.5488 10.271 43.4578 9.075H47.8128C47.8518 8.906 47.8778 8.529 47.8778 8.217C47.8778 6.527 46.7208 5.357 45.0828 5.357C43.2888 5.357 41.9758 6.826 41.9758 8.841C41.9758 10.791 43.2888 12.182 45.0958 12.182C46.3048 12.182 47.3448 11.545 47.7998 10.505ZM45.0828 6.449C45.8888 6.449 46.4348 7.086 46.4868 8.074H43.5098C43.7048 7.073 44.3158 6.449 45.0828 6.449Z"
+                  fill="#1E2528" />
+                <circle cx="5.5" cy="8.5" r="5.5" fill="url(#paint0_linear_1_37)" />
+                <defs>
+                  <linearGradient id="paint0_linear_1_37" x1="-2.20228" y1="0.335853" x2="13.8613" y2="0.410072" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#07A76F" />
+                    <stop offset="1" stop-color="#8ECA45" />
+                  </linearGradient>
+                </defs>
+              </svg>
+
+            </div>
+          </div>
+        </div>
+        <div id="map" class="col_right_map"></div>
+      </section>
+
+
+      <div class="line desktop"></div>
+      <div class="header_section">
+        <div class="header_container">
+          <div class="line_left">
+            <span></span>
           </div>
           <div class="header_title">
             <h3>I principali benefici del verde urbano</h3>
@@ -176,92 +248,117 @@
       </div>
       <div class="line"></div>
 
-    <section class="text_section section">
-      <div class="text_container section_container">
-        <div class="paragraph">
-          <p fade>
+      <section class="text_section section">
+        <div class="text_container section_container">
+          <div class="paragraph">
+            <p fade>
 
-            <span class="droptext">
-              <img src="./images/content/parte-2.svg" alt="">
-            </span>
+              <span class="droptext">
+                <img src="./images/content/parte-2.svg" alt="">
+              </span>
 
-            <strong>Perché gli alberi e il verde sono importanti per le nostre città?</strong> Perché ne cerchiamo sempre di più la presenza? Si possono citare una miriade di effetti positivi forniti dai sistemi verdi urbani e periurbani. Dalla riduzione dell’inquinamento acustico e del rischio idrogeologico, alla riqualificazione estetica dei paesaggi urbani, gli alberi favoriscono un territorio e uno stile di vita sani. Durante i lockdown e le restrizioni della pandemia, ci siamo resi conto di quanto sia fondamentale avere un’area verde vicino a casa per il proprio benessere fisico e mentale. Ma il verde pubblico in città è anche e soprattutto importante per la sua capacità di assorbimento della CO2 e di mitigazione del fenomeno delle isole di calore urbano.</p>
+              <strong>Perché gli alberi e il verde sono importanti per le nostre città?</strong> Perché ne cerchiamo sempre di più la presenza? Si possono citare una miriade di effetti positivi forniti dai sistemi verdi urbani e periurbani. Dalla
+              riduzione dell’inquinamento acustico e del rischio idrogeologico, alla riqualificazione estetica dei paesaggi urbani, gli alberi favoriscono un territorio e uno stile di vita sani. Durante i lockdown e le restrizioni della pandemia, ci
+              siamo resi conto di quanto sia fondamentale avere un’area verde vicino a casa per il proprio benessere fisico e mentale. Ma il verde pubblico in città è anche e soprattutto importante per la sua capacità di assorbimento della CO2 e di
+              mitigazione del fenomeno delle isole di calore urbano.</p>
 
-          <p fade>La forestazione urbana, secondo molti studi, è la soluzione più efficace ed economica per mitigare l’inquinamento atmosferico: gli alberi sono infatti eccezionali purificatori d’aria. Grazie al processo della fotosintesi clorofilliana assorbono tramite le foglie, il tronco e le ramificazioni, una grande quantità di particolato atmosferico e gas inquinanti, producendo in cambio ossigeno.</p>
-        </div>
-      </div>
-    </section>
-
-    <div animate class="line"></div>
-
-
-    <section id="second_illu" class="info_section section">
-      <div class="info_container section_container">
-        <div class="section_title_container">
-          <img src="./images/content/info_first_icon.svg" alt="">
-          <div class="section_title">
-            <h4>Gli alberi che assorbono <br> più CO2 in un anno </h4>
+            <p fade>La forestazione urbana, secondo molti studi, è la soluzione più efficace ed economica per mitigare l’inquinamento atmosferico: gli alberi sono infatti eccezionali purificatori d’aria. Grazie al processo della fotosintesi
+              clorofilliana assorbono tramite le foglie, il tronco e le ramificazioni, una grande quantità di particolato atmosferico e gas inquinanti, producendo in cambio ossigeno.</p>
           </div>
         </div>
-        <div class="illustration_container">
-          <img class="desktop" src="./images/content/info_second.svg" alt="">
-          <img class="mobile" src="./images/content/info_second_mobile.svg" alt="">
+      </section>
 
-        </div>
-      </div>
-    </section>
-
-    <div animate class="line"></div>
+      <div animate class="line"></div>
 
 
-    <section class="text_section section">
-      <div class="text_container section_container no-margin-bottom">
-        <div class="paragraph">
-          <p fade>Ma non tutti gli alberi sono ugualmente efficaci in questa azione: un esemplare maturo di Betulla Bianca riesce ad esempio ad assimilare in un anno un quantitativo doppio di CO2 rispetto, ad esempio, a una Castagno d’India, che comunque rientra tra le migliori 20 specie diffuse in Italia sotto questo punto di vista.</p>
-
-          <p fade>Gli alberi oltre a “mangiare” smog riducono poi la temperatura dell'ambiente in cui si trovano durante i mesi più caldi. Non solo le loro chiome creano un forte ombreggiamento, ma tramite il processo di “evapotraspirazione”, il corrispettivo arboreo della sudorazione umana, espellono acqua per raffreddarsi, che quando evapora riduce ulteriormente la temperatura dell’area circostante.</p>
-
-          <p fade>In corrispondenza delle zone maggiormente cementificate e con meno alberi, si creano più facilmente aree note come isole di calore, più calde rispetto alle circostanti zone limitrofe periferiche e rurali.</p>
-        </div>
-      </div>
-    </section>
-
-    <div class="text_highlight_container">
-      <p fade> <span>ISOLA DI CALORE </span> <img src="./images/content/arrow_lf.svg" alt="">In climatologia, con il termine <strong>isola di calore</strong> si intende un particolare fenomeno urbano in cui si creano aree più calde all'interno della città, in corrispondenza delle zone maggiormente antropizzate, rispetto alle circostanti aree periferiche e rurali. Il maggior accumulo di calore è determinato da una serie di concause, in interazione tra loro, tra le quali sono da annoverare la diffusa cementificazione, le superfici asfaltate che prevalgono nettamente rispetto alle aree verdi e le emissioni degli autoveicoli, degli impianti  e dei sistemi di riscaldamento o raffreddamento.</p>
-    </div>
-
-    <div class="line"></div>
-
-
-    <section class="map_section">
-      <div class="col_left_map">
-        <div class="col-container">
-          <div class="map_heading">
-            <img src="./images/content/map_icon.svg" alt="">
-            <h4>Le temperature nelle aree di Milano, Con e senza alberi</h4>
+      <section id="second_illu" class="info_section section">
+        <div class="info_container section_container">
+          <div class="section_title_container">
+            <img src="./images/content/info_first_icon.svg" alt="">
+            <div class="section_title">
+              <h4>Gli alberi che assorbono <br> più CO2 in un anno </h4>
+            </div>
           </div>
+          <div class="illustration_container">
+            <img class="desktop" src="./images/content/info_second.svg" alt="">
+            <img class="mobile" src="./images/content/info_second_mobile.svg" alt="">
+
+          </div>
+        </div>
+      </section>
+
+      <div animate class="line"></div>
+
+
+      <section class="text_section section">
+        <div class="text_container section_container no-margin-bottom">
+          <div class="paragraph">
+            <p fade>Ma non tutti gli alberi sono ugualmente efficaci in questa azione: un esemplare maturo di Betulla Bianca riesce ad esempio ad assimilare in un anno un quantitativo doppio di CO2 rispetto, ad esempio, a una Castagno d’India, che
+              comunque rientra tra le migliori 20 specie diffuse in Italia sotto questo punto di vista.</p>
+
+            <p fade>Gli alberi oltre a “mangiare” smog riducono poi la temperatura dell'ambiente in cui si trovano durante i mesi più caldi. Non solo le loro chiome creano un forte ombreggiamento, ma tramite il processo di “evapotraspirazione”, il
+              corrispettivo arboreo della sudorazione umana, espellono acqua per raffreddarsi, che quando evapora riduce ulteriormente la temperatura dell’area circostante.</p>
+
+            <p fade>In corrispondenza delle zone maggiormente cementificate e con meno alberi, si creano più facilmente aree note come isole di calore, più calde rispetto alle circostanti zone limitrofe periferiche e rurali.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="text_highlight_container">
+        <p fade> <span>ISOLA DI CALORE </span> <img src="./images/content/arrow_lf.svg" alt="">In climatologia, con il termine <strong>isola di calore</strong> si intende un particolare fenomeno urbano in cui si creano aree più calde all'interno
+          della città, in corrispondenza delle zone maggiormente antropizzate, rispetto alle circostanti aree periferiche e rurali. Il maggior accumulo di calore è determinato da una serie di concause, in interazione tra loro, tra le quali sono da
+          annoverare la diffusa cementificazione, le superfici asfaltate che prevalgono nettamente rispetto alle aree verdi e le emissioni degli autoveicoli, degli impianti e dei sistemi di riscaldamento o raffreddamento.</p>
+      </div>
+
+      <div class="line desktop"></div>
+
+
+      <section class="map_section">
+        <div class="col_left_map">
+          <div class="col-container">
+            <div class="map_heading">
+              <img src="./images/content/map_icon.svg" alt="">
+              <h4>Le temperature nelle aree di Milano, Con e senza alberi</h4>
+            </div>
 
             <div id="menu">
             </div>
 
-          <div class="map_description">
-            <p>A Milano la temperatura media estiva superficiale, rilevata alle 10 del mattino, è di 33.9 °C in aree arborate, mentre raggiunge i 36.5 °C in aree non arborate: più aumenta l’estensione delle aree con bassa densità di copertura arborea nel nucleo metropolitano, più aumenta l’intensità dell’isola di calore urbana, e quindi il delta tra le temperature – che può arrivare fino a 6 gradi centigradi. Questo, di fatto, si traduce in un maggiore utilizzo di condizionatori, e quindi maggiori emissioni.</p>
-          </div>
+            <div class="map_description">
+              <p>A Milano la temperatura media estiva superficiale, rilevata alle 10 del mattino, è di 33.9 °C in aree arborate, mentre raggiunge i 36.5 °C in aree non arborate: più aumenta l’estensione delle aree con bassa densità di copertura
+                arborea nel nucleo metropolitano, più aumenta l’intensità dell’isola di calore urbana, e quindi il delta tra le temperature – che può arrivare fino a 6 gradi centigradi.</p>
+            </div>
 
-          <div class="map_info">
-            <p>La mappa di Milano è relativa alla temperatura superficiale calcolate da Landsat-8 con risoluzione 30m [valori medi estivi di giugno–agosto 2015/r21) </p>
+            <div class="map_info">
+              <svg width="224" height="16" viewBox="0 0 224 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M59.969 9.777L58.643 9.283C58.279 10.193 57.408 10.83 56.576 10.83C55.185 10.83 54.184 9.608 54.184 7.879C54.184 6.072 55.185 4.772 56.576 4.772C57.369 4.772 58.188 5.409 58.539 6.267L59.93 5.76C59.384 4.408 58.006 3.446 56.498 3.446C54.21 3.446 52.559 5.318 52.559 7.892C52.559 10.388 54.197 12.169 56.498 12.169C58.019 12.169 59.475 11.168 59.969 9.777ZM62.786 12V6.28L67.024 12H68.35V3.589H66.907V9.361L62.669 3.589H61.343V12H62.786ZM71.9923 4.876H73.3833C74.3713 4.876 75.0343 5.435 75.0343 6.267C75.0343 7.164 74.3583 7.749 73.3833 7.749H71.9923V4.876ZM71.9923 12V9.036H73.3573C73.5393 9.036 73.7213 9.023 73.9033 9.01L75.4373 12H77.1403L75.2943 8.568C76.1263 8.087 76.6203 7.268 76.6203 6.254C76.6203 4.668 75.3463 3.589 73.4613 3.589H70.4583V12H71.9923ZM77.917 9.192H84.027V8.204H77.917V9.192ZM87.3917 3.589H85.8577V12H87.3917V3.589ZM95.5072 8.75C95.5072 6.774 94.3632 5.357 92.7772 5.357C92.0492 5.357 91.2692 5.76 90.7882 6.358V2.887H89.3582V12H90.7102V11.207C91.1652 11.766 91.9712 12.182 92.6862 12.182C94.3242 12.182 95.5072 10.739 95.5072 8.75ZM92.2702 11.012C91.6722 11.012 91.1132 10.726 90.7882 10.297V7.268C91.1132 6.826 91.6982 6.527 92.3222 6.527C93.2972 6.527 93.9992 7.437 93.9992 8.724C93.9992 10.05 93.2712 11.012 92.2702 11.012ZM102.281 10.505L101.189 10.076C100.877 10.687 100.305 11.051 99.6813 11.051C98.7193 11.051 98.0303 10.271 97.9393 9.075H102.294C102.333 8.906 102.359 8.529 102.359 8.217C102.359 6.527 101.202 5.357 99.5643 5.357C97.7703 5.357 96.4573 6.826 96.4573 8.841C96.4573 10.791 97.7703 12.182 99.5773 12.182C100.786 12.182 101.826 11.545 102.281 10.505ZM99.5643 6.449C100.37 6.449 100.916 7.086 100.968 8.074H97.9913C98.1863 7.073 98.7973 6.449 99.5643 6.449ZM107.482 12L108.834 9.686L110.225 12H111.902L109.731 8.75L111.759 5.526H110.134L108.873 7.879L107.521 5.526H105.883L107.937 8.75L105.818 12H107.482ZM115.882 3.589V12H121.563V10.687H117.416V3.589H115.882ZM128.286 12.091L128.351 11.051C128.273 11.064 128.13 11.077 128.052 11.077C127.701 11.077 127.519 10.83 127.519 10.479V7.736C127.519 6.189 126.583 5.357 125.075 5.357C123.853 5.357 122.865 6.007 122.41 7.047L123.476 7.502C123.775 6.93 124.243 6.501 124.945 6.501C125.647 6.501 126.102 6.969 126.102 7.697V8.113L124.659 8.308C123.203 8.516 122.215 9.231 122.215 10.414C122.215 11.441 123.034 12.182 124.178 12.182C125.075 12.182 125.79 11.74 126.193 11.077C126.414 11.831 126.947 12.182 127.701 12.182C127.922 12.182 128.104 12.143 128.286 12.091ZM124.646 11.077C124.087 11.077 123.684 10.739 123.684 10.258C123.684 9.673 124.217 9.322 124.958 9.231L126.102 9.075V10.232C125.79 10.726 125.257 11.077 124.646 11.077ZM135.105 12V7.762C135.105 6.358 134.143 5.357 132.895 5.357C131.998 5.357 131.244 5.864 130.815 6.475V5.526H129.437V12H130.867V7.359C131.218 6.904 131.829 6.54 132.466 6.54C133.168 6.54 133.675 7.06 133.675 7.866V12H135.105ZM139.581 11.012C138.619 11.012 137.93 10.089 137.93 8.789C137.93 7.476 138.658 6.527 139.659 6.527C140.244 6.527 140.803 6.787 141.115 7.177V10.232C140.764 10.7 140.179 11.012 139.581 11.012ZM142.545 12V2.887H141.115V6.202C140.686 5.695 139.971 5.357 139.282 5.357C137.618 5.357 136.422 6.8 136.422 8.815C136.422 10.765 137.579 12.182 139.191 12.182C139.906 12.182 140.725 11.727 141.193 11.103V12H142.545ZM149.541 10.18C149.541 8.971 148.514 8.451 147.032 8.113C146.005 7.879 145.42 7.723 145.42 7.216C145.42 6.748 145.94 6.436 146.707 6.436C147.552 6.436 148.124 6.787 148.436 7.359L149.502 6.917C149.086 6.111 148.254 5.357 146.72 5.357C145.147 5.357 144.068 6.176 144.068 7.333C144.068 8.477 145.16 9.01 146.499 9.309C147.539 9.53 148.189 9.725 148.189 10.271C148.189 10.778 147.708 11.103 146.889 11.103C145.901 11.103 145.212 10.661 144.874 10.076L143.782 10.518C144.224 11.506 145.316 12.182 146.837 12.182C148.514 12.182 149.541 11.376 149.541 10.18ZM156.469 12.091L156.534 11.051C156.456 11.064 156.313 11.077 156.235 11.077C155.884 11.077 155.702 10.83 155.702 10.479V7.736C155.702 6.189 154.766 5.357 153.258 5.357C152.036 5.357 151.048 6.007 150.593 7.047L151.659 7.502C151.958 6.93 152.426 6.501 153.128 6.501C153.83 6.501 154.285 6.969 154.285 7.697V8.113L152.842 8.308C151.386 8.516 150.398 9.231 150.398 10.414C150.398 11.441 151.217 12.182 152.361 12.182C153.258 12.182 153.973 11.74 154.376 11.077C154.597 11.831 155.13 12.182 155.884 12.182C156.105 12.182 156.287 12.143 156.469 12.091ZM152.829 11.077C152.27 11.077 151.867 10.739 151.867 10.258C151.867 9.673 152.4 9.322 153.141 9.231L154.285 9.075V10.232C153.973 10.726 153.44 11.077 152.829 11.077ZM161.547 11.974V10.817C161.3 10.895 160.884 10.973 160.494 10.973C159.727 10.973 159.415 10.609 159.415 10.011V6.683H161.521V5.526H159.415V3.953H157.985V5.526H157.01V6.683H157.985V10.31C157.985 11.493 158.778 12.182 160.208 12.182C160.689 12.182 161.248 12.078 161.547 11.974ZM162.34 9.27H166.162V8.022H162.34V9.27ZM174.432 9.764C174.432 8.841 173.951 8.23 172.924 7.762C173.756 7.281 174.328 6.644 174.302 5.799C174.276 4.382 172.846 3.42 170.883 3.42C168.907 3.42 167.49 4.447 167.49 5.877C167.49 6.618 167.945 7.281 168.855 7.762C167.906 8.204 167.243 8.997 167.243 9.842C167.243 11.194 168.829 12.169 170.909 12.169C172.937 12.169 174.432 11.103 174.432 9.764ZM171.117 7.216C169.648 6.904 169.089 6.501 169.089 5.916C169.089 5.188 169.817 4.707 170.896 4.707C171.949 4.707 172.703 5.201 172.703 5.929C172.703 6.501 172.274 6.969 171.65 7.346C171.481 7.294 171.299 7.255 171.117 7.216ZM170.896 10.869C169.752 10.869 168.868 10.375 168.868 9.66C168.868 9.114 169.323 8.568 170.051 8.217C170.259 8.282 170.48 8.321 170.714 8.373C172.313 8.698 172.807 9.101 172.807 9.738C172.807 10.336 172.014 10.869 170.896 10.869ZM184.666 9.257V8.191H182.144V5.721H181.039V8.191H178.504V9.257H181.039V11.844H182.144V9.257H184.666ZM190.96 3.589H189.426V12H190.96V3.589ZM195.93 3.446C194.162 3.446 192.719 4.512 192.719 5.994C192.719 7.45 193.928 8.035 195.644 8.464C197.022 8.802 197.633 9.062 197.633 9.738C197.633 10.453 196.944 10.908 195.995 10.908C194.799 10.908 194.071 10.349 193.668 9.504L192.381 10.024C192.979 11.337 194.227 12.169 195.982 12.169C197.854 12.169 199.18 11.116 199.18 9.582C199.18 8.113 197.958 7.515 196.229 7.073C194.838 6.735 194.266 6.488 194.266 5.851C194.266 5.188 195.02 4.694 195.943 4.694C196.879 4.694 197.594 5.188 197.971 5.994L199.232 5.448C198.686 4.304 197.568 3.446 195.93 3.446ZM202.335 12V9.413H203.687C205.637 9.413 206.963 8.204 206.963 6.488C206.963 4.785 205.637 3.589 203.661 3.589H200.801V12H202.335ZM202.335 4.876H203.557C204.636 4.876 205.377 5.526 205.377 6.488C205.377 7.463 204.636 8.126 203.557 8.126H202.335V4.876ZM209.914 4.876H211.305C212.293 4.876 212.956 5.435 212.956 6.267C212.956 7.164 212.28 7.749 211.305 7.749H209.914V4.876ZM209.914 12V9.036H211.279C211.461 9.036 211.643 9.023 211.825 9.01L213.359 12H215.062L213.216 8.568C214.048 8.087 214.542 7.268 214.542 6.254C214.542 4.668 213.268 3.589 211.383 3.589H208.38V12H209.914ZM219.432 5.292H219.458L220.654 8.62H218.236L219.432 5.292ZM217.014 12L217.781 9.855H221.109L221.876 12H223.462L220.303 3.589H218.678L215.519 12H217.014Z"
+                  fill="#C5C5C5" />
+                <path d="M52 13.3H223.605V13.95H52V13.3Z" fill="#C5C5C5" />
+                <path
+                  d="M20.902 8.62V7.359H17.587V4.876H21.799V3.589H16.053V12H17.587V8.62H20.902ZM28.6829 8.763C28.6829 6.787 27.3309 5.357 25.4589 5.357C23.5739 5.357 22.2089 6.787 22.2089 8.763C22.2089 10.739 23.5739 12.169 25.4589 12.169C27.3309 12.169 28.6829 10.739 28.6829 8.763ZM23.7169 8.763C23.7169 7.463 24.4449 6.514 25.4589 6.514C26.4599 6.514 27.1749 7.463 27.1749 8.763C27.1749 10.063 26.4599 10.999 25.4589 10.999C24.4449 10.999 23.7169 10.063 23.7169 8.763ZM35.7206 12V7.762C35.7206 6.358 34.7586 5.357 33.5106 5.357C32.6136 5.357 31.8596 5.864 31.4306 6.475V5.526H30.0526V12H31.4826V7.359C31.8336 6.904 32.4446 6.54 33.0816 6.54C33.7836 6.54 34.2906 7.06 34.2906 7.866V12H35.7206ZM41.3165 11.974V10.817C41.0695 10.895 40.6535 10.973 40.2635 10.973C39.4965 10.973 39.1845 10.609 39.1845 10.011V6.683H41.2905V5.526H39.1845V3.953H37.7545V5.526H36.7795V6.683H37.7545V10.31C37.7545 11.493 38.5475 12.182 39.9775 12.182C40.4585 12.182 41.0175 12.078 41.3165 11.974ZM47.7998 10.505L46.7078 10.076C46.3958 10.687 45.8238 11.051 45.1998 11.051C44.2378 11.051 43.5488 10.271 43.4578 9.075H47.8128C47.8518 8.906 47.8778 8.529 47.8778 8.217C47.8778 6.527 46.7208 5.357 45.0828 5.357C43.2888 5.357 41.9758 6.826 41.9758 8.841C41.9758 10.791 43.2888 12.182 45.0958 12.182C46.3048 12.182 47.3448 11.545 47.7998 10.505ZM45.0828 6.449C45.8888 6.449 46.4348 7.086 46.4868 8.074H43.5098C43.7048 7.073 44.3158 6.449 45.0828 6.449Z"
+                  fill="#3D3D3D" />
+                <circle cx="5.5" cy="8.5" r="5.5" fill="url(#paint0_linear_457_116)" />
+                <defs>
+                  <linearGradient id="paint0_linear_457_116" x1="-2.20228" y1="0.335853" x2="13.8613" y2="0.410072" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#07A76F" />
+                    <stop offset="1" stop-color="#8ECA45" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              <p>La mappa di Milano è relativa alla temperatura superficiale calcolate da Landsat-8 con risoluzione 30m [valori medi estivi di giugno–agosto 2015/r21) </p>
+            </div>
           </div>
         </div>
-      </div>
-      <div id="map_second" class="col_right_map"></div>
-    </section>
+        <div id="map_second" class="col_right_map"></div>
+      </section>
 
 
-    <div class="line desktop"></div>
+      <div class="line desktop"></div>
       <div class="header_section">
         <div class="header_container">
           <div class="line_left">
-              <span></span>
+            <span></span>
           </div>
           <div class="header_title">
             <h3>I dati sul verde urbano italiano: cosa c’è e cosa manca</h3>
@@ -279,7 +376,8 @@
               <img src="./images/content/parte-3.svg" alt="">
             </span>
 
-            <p fade>Tanto è facile capire l’importanza degli alberi negli ecosistemi cittadini, quanto è difficile costruire una fotografia univoca del verde urbano in Italia. Manca un sistema di monitoraggio dettagliato nazionale e bisogna fare i conti con scarsa omogeneizzazione e lento aggiornamento dell’informazione statistica a livello comunale o anche solo di città metropolitane.</p>
+            <p fade>Tanto è facile capire l’importanza degli alberi negli ecosistemi cittadini, quanto è difficile costruire una fotografia univoca del verde urbano in Italia. Manca un sistema di monitoraggio dettagliato nazionale e bisogna fare i
+              conti con scarsa omogeneizzazione e lento aggiornamento dell’informazione statistica a livello comunale o anche solo di città metropolitane.</p>
           </div>
         </div>
       </section>
@@ -288,31 +386,34 @@
 
       <section class="map_section">
         <div class="map_navigation">
-
+          <div class="map_heading">
+            <img src="./images/content/map_icon.svg" alt="">
+            <h4>Le temperature nelle aree di Milano, Con e senza alberi</h4>
+          </div>
 
           <div class="tab">
-            <button class="tablinks active" city="roma">
-              ROMA
-            </button>
-            <button class="tablinks" city="milano" >
-              MILANO
-            </button>
-            <button class="tablinks" city="torino" >
+            <button class="tablinks active" city="torino">
               TORINO
             </button>
-            <button class="tablinks" city="bologna" >
-            BOLOGNA
+            <button class="tablinks" city="milano">
+              MILANO
             </button>
-            <button class="tablinks" city="napoli" >
+            <button class="tablinks" city="bologna">
+              BOLOGNA
+            </button>
+            <button class="tablinks" city="roma">
+              ROMA
+            </button>
+            <button class="tablinks" city="napoli">
               NAPOLI
             </button>
           </div>
 
           <div class="tab_content_container">
-            <div id="roma" class="tabcontent" style="display: block;">
+            <div id="roma" class="tabcontent">
               <div class="tab_heading">
                 <div class="tab_num">
-                  1
+                  4
                 </div>
                 <h3>ROMA</h3>
               </div>
@@ -329,31 +430,33 @@
                 <h3>MILANO</h3>
               </div>
               <div class="tab_content">
-                <p>Il <a target="_blank" href="https://dati.comune.milano.it/it/">portale open data</a> del Comune di Milano dispone di un dataset con la localizzazione georeferenziata dei parchi e giardini sul territorio del Comune, mancano informazioni precise sui singoli alberi o alberature, che sono invece presenti nella mappa del <a target="_blank" href="https://geoportale.comune.milano.it/sit/patrimonio-del-verde/">patrimonio del verde</a>, ma non in formato open data.</p>
+                <p>Il <a target="_blank" href="https://dati.comune.milano.it/it/">portale open data</a> del Comune di Milano dispone di un dataset con la localizzazione georeferenziata dei parchi e giardini sul territorio del Comune. Mancano
+                  però informazioni precise sui singoli alberi o alberature, che sono invece presenti nella mappa del <a target="_blank" href="https://geoportale.comune.milano.it/sit/patrimonio-del-verde/">patrimonio del verde</a> - ma non in formato open
+                  data.</p>
               </div>
             </div>
 
-            <div id="torino" class="tabcontent">
+            <div id="torino" class="tabcontent" style="display: block;">
               <div class="tab_heading">
                 <div class="tab_num">
-                  3
+                  1
                 </div>
                 <h3>TORINO</h3>
               </div>
               <div class="tab_content">
-                <p>Il <a target="_blank" href="http://aperto.comune.torino.it/">portale aperTO</a>, che raccoglie gli open data prodotti sia dall’amministrazione comune di Torino, sia da enti terzi come società partecipate, raccoglie le alberate del territorio comunale e la copertura forestale del territorio provinciale.</p>
+                <p>Il <a target="_blank" href="http://aperto.comune.torino.it/">portale aperTO</a>, che raccoglie gli open data prodotti sia dall’amministrazione comunale di Torino, sia da enti terzi come società partecipate, riporta in parte le alberate del territorio comunale e la copertura forestale del territorio provinciale.</p>
               </div>
             </div>
 
             <div id="bologna" class="tabcontent">
               <div class="tab_heading">
                 <div class="tab_num">
-                  4
+                  3
                 </div>
                 <h3>BOLOGNA</h3>
               </div>
               <div class="tab_content">
-                <p>Il <a target="_blank" href="https://dati.comune.milano.it/it/">portale open data</a> del Comune di Bologna permette di scaricare dati georeferenziati sui singoli alberi, compresi di informazioni come altezza, specie arborea, dimora e distanza dai fabbricati. Sono inoltre presenti dataset delle aree verdi e delle siepi.</p>
+                <p>Pur non coprendo del tutto le aree verde della città, il <a target="_blank" href="https://opendata.comune.bologna.it/">portale open data</a> del Comune di Bologna permette di scaricare dati georeferenziati sui singoli alberi, compresi di informazioni come altezza, specie arborea, dimora e distanza dai fabbricati. Sono inoltre presenti dataset delle aree verdi e delle siepi.</p>
               </div>
             </div>
 
@@ -370,32 +473,54 @@
             </div>
           </div>
 
+          <div class="map_info">
+            <svg width="195" height="16" viewBox="0 0 195 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M58.981 12V10.713H54.587V8.425H58.084V7.177H54.587V4.876H58.89V3.589H53.053V12H58.981ZM61.8429 2.887H60.4129V12H61.8429V2.887ZM69.2526 12.091L69.3176 11.051C69.2396 11.064 69.0966 11.077 69.0186 11.077C68.6676 11.077 68.4856 10.83 68.4856 10.479V7.736C68.4856 6.189 67.5496 5.357 66.0416 5.357C64.8196 5.357 63.8316 6.007 63.3766 7.047L64.4426 7.502C64.7416 6.93 65.2096 6.501 65.9116 6.501C66.6136 6.501 67.0686 6.969 67.0686 7.697V8.113L65.6256 8.308C64.1696 8.516 63.1816 9.231 63.1816 10.414C63.1816 11.441 64.0006 12.182 65.1446 12.182C66.0416 12.182 66.7566 11.74 67.1596 11.077C67.3806 11.831 67.9136 12.182 68.6676 12.182C68.8886 12.182 69.0706 12.143 69.2526 12.091ZM65.6126 11.077C65.0536 11.077 64.6506 10.739 64.6506 10.258C64.6506 9.673 65.1836 9.322 65.9246 9.231L67.0686 9.075V10.232C66.7566 10.726 66.2236 11.077 65.6126 11.077ZM76.5531 8.75C76.5531 6.774 75.4091 5.357 73.8231 5.357C73.0951 5.357 72.3151 5.76 71.8341 6.358V2.887H70.4041V12H71.7561V11.207C72.2111 11.766 73.0171 12.182 73.7321 12.182C75.3701 12.182 76.5531 10.739 76.5531 8.75ZM73.3161 11.012C72.7181 11.012 72.1591 10.726 71.8341 10.297V7.268C72.1591 6.826 72.7441 6.527 73.3681 6.527C74.3431 6.527 75.0451 7.437 75.0451 8.724C75.0451 10.05 74.3171 11.012 73.3161 11.012ZM83.9642 8.763C83.9642 6.787 82.6122 5.357 80.7402 5.357C78.8552 5.357 77.4902 6.787 77.4902 8.763C77.4902 10.739 78.8552 12.169 80.7402 12.169C82.6122 12.169 83.9642 10.739 83.9642 8.763ZM78.9982 8.763C78.9982 7.463 79.7262 6.514 80.7402 6.514C81.7412 6.514 82.4562 7.463 82.4562 8.763C82.4562 10.063 81.7412 10.999 80.7402 10.999C79.7262 10.999 78.9982 10.063 78.9982 8.763ZM86.7638 12V8.36C86.8808 7.476 87.3748 6.735 88.3628 6.735C88.5708 6.735 88.8698 6.774 89.0518 6.826L89.0648 5.461C88.9218 5.396 88.6228 5.357 88.4018 5.357C87.6478 5.357 86.9588 6.059 86.7118 6.904V5.526H85.3338V12H86.7638ZM95.6462 12.091L95.7112 11.051C95.6332 11.064 95.4902 11.077 95.4122 11.077C95.0612 11.077 94.8792 10.83 94.8792 10.479V7.736C94.8792 6.189 93.9432 5.357 92.4352 5.357C91.2132 5.357 90.2252 6.007 89.7702 7.047L90.8362 7.502C91.1352 6.93 91.6032 6.501 92.3052 6.501C93.0072 6.501 93.4622 6.969 93.4622 7.697V8.113L92.0192 8.308C90.5632 8.516 89.5752 9.231 89.5752 10.414C89.5752 11.441 90.3942 12.182 91.5382 12.182C92.4352 12.182 93.1502 11.74 93.5532 11.077C93.7742 11.831 94.3072 12.182 95.0612 12.182C95.2822 12.182 95.4642 12.143 95.6462 12.091ZM92.0062 11.077C91.4472 11.077 91.0442 10.739 91.0442 10.258C91.0442 9.673 91.5772 9.322 92.3182 9.231L93.4622 9.075V10.232C93.1502 10.726 92.6172 11.077 92.0062 11.077ZM96.4207 6.722H99.6837L96.3427 10.934V12H101.556V10.804H98.0847L101.504 6.592V5.526H96.4207V6.722ZM104.347 5.526H102.917V12H104.347V5.526ZM104.347 3.004H102.917V4.421H104.347V3.004ZM112.199 8.763C112.199 6.787 110.847 5.357 108.975 5.357C107.09 5.357 105.725 6.787 105.725 8.763C105.725 10.739 107.09 12.169 108.975 12.169C110.847 12.169 112.199 10.739 112.199 8.763ZM107.233 8.763C107.233 7.463 107.961 6.514 108.975 6.514C109.976 6.514 110.691 7.463 110.691 8.763C110.691 10.063 109.976 10.999 108.975 10.999C107.961 10.999 107.233 10.063 107.233 8.763ZM119.236 12V7.762C119.236 6.358 118.274 5.357 117.026 5.357C116.129 5.357 115.375 5.864 114.946 6.475V5.526H113.568V12H114.998V7.359C115.349 6.904 115.96 6.54 116.597 6.54C117.299 6.54 117.806 7.06 117.806 7.866V12H119.236ZM126.364 10.505L125.272 10.076C124.96 10.687 124.388 11.051 123.764 11.051C122.802 11.051 122.113 10.271 122.022 9.075H126.377C126.416 8.906 126.442 8.529 126.442 8.217C126.442 6.527 125.285 5.357 123.647 5.357C121.853 5.357 120.54 6.826 120.54 8.841C120.54 10.791 121.853 12.182 123.66 12.182C124.869 12.182 125.909 11.545 126.364 10.505ZM123.647 6.449C124.453 6.449 124.999 7.086 125.051 8.074H122.074C122.269 7.073 122.88 6.449 123.647 6.449ZM133.411 11.012C132.449 11.012 131.76 10.089 131.76 8.789C131.76 7.476 132.488 6.527 133.489 6.527C134.074 6.527 134.633 6.787 134.945 7.177V10.232C134.594 10.7 134.009 11.012 133.411 11.012ZM136.375 12V2.887H134.945V6.202C134.516 5.695 133.801 5.357 133.112 5.357C131.448 5.357 130.252 6.8 130.252 8.815C130.252 10.765 131.409 12.182 133.021 12.182C133.736 12.182 134.555 11.727 135.023 11.103V12H136.375ZM143.787 12.091L143.852 11.051C143.774 11.064 143.631 11.077 143.553 11.077C143.202 11.077 143.02 10.83 143.02 10.479V7.736C143.02 6.189 142.084 5.357 140.576 5.357C139.354 5.357 138.366 6.007 137.911 7.047L138.977 7.502C139.276 6.93 139.744 6.501 140.446 6.501C141.148 6.501 141.603 6.969 141.603 7.697V8.113L140.16 8.308C138.704 8.516 137.716 9.231 137.716 10.414C137.716 11.441 138.535 12.182 139.679 12.182C140.576 12.182 141.291 11.74 141.694 11.077C141.915 11.831 142.448 12.182 143.202 12.182C143.423 12.182 143.605 12.143 143.787 12.091ZM140.147 11.077C139.588 11.077 139.185 10.739 139.185 10.258C139.185 9.673 139.718 9.322 140.459 9.231L141.603 9.075V10.232C141.291 10.726 140.758 11.077 140.147 11.077ZM148.864 11.974V10.817C148.617 10.895 148.201 10.973 147.811 10.973C147.044 10.973 146.732 10.609 146.732 10.011V6.683H148.838V5.526H146.732V3.953H145.302V5.526H144.327V6.683H145.302V10.31C145.302 11.493 146.095 12.182 147.525 12.182C148.006 12.182 148.565 12.078 148.864 11.974ZM151.459 5.526H150.029V12H151.459V5.526ZM151.459 3.004H150.029V4.421H151.459V3.004ZM158.853 11.012C157.891 11.012 157.202 10.089 157.202 8.789C157.202 7.476 157.93 6.527 158.931 6.527C159.516 6.527 160.075 6.787 160.387 7.177V10.232C160.036 10.7 159.451 11.012 158.853 11.012ZM161.817 12V2.887H160.387V6.202C159.958 5.695 159.243 5.357 158.554 5.357C156.89 5.357 155.694 6.8 155.694 8.815C155.694 10.765 156.851 12.182 158.463 12.182C159.178 12.182 159.997 11.727 160.465 11.103V12H161.817ZM165.081 5.526H163.651V12H165.081V5.526ZM165.081 3.004H163.651V4.421H165.081V3.004ZM172.579 12C175.114 12 176.96 10.206 176.96 7.736C176.96 5.331 175.114 3.589 172.579 3.589H169.888V12H172.579ZM171.422 4.902H172.527C174.152 4.902 175.335 6.085 175.335 7.736C175.335 9.452 174.152 10.687 172.527 10.687H171.422V4.902ZM183.993 12.091L184.058 11.051C183.98 11.064 183.837 11.077 183.759 11.077C183.408 11.077 183.226 10.83 183.226 10.479V7.736C183.226 6.189 182.29 5.357 180.782 5.357C179.56 5.357 178.572 6.007 178.117 7.047L179.183 7.502C179.482 6.93 179.95 6.501 180.652 6.501C181.354 6.501 181.809 6.969 181.809 7.697V8.113L180.366 8.308C178.91 8.516 177.922 9.231 177.922 10.414C177.922 11.441 178.741 12.182 179.885 12.182C180.782 12.182 181.497 11.74 181.9 11.077C182.121 11.831 182.654 12.182 183.408 12.182C183.629 12.182 183.811 12.143 183.993 12.091ZM180.353 11.077C179.794 11.077 179.391 10.739 179.391 10.258C179.391 9.673 179.924 9.322 180.665 9.231L181.809 9.075V10.232C181.497 10.726 180.964 11.077 180.353 11.077ZM186.574 2.887H185.144V12H186.574V2.887ZM189.837 12V10.18L190.643 9.296L192.528 12H194.244L191.553 8.321L194.101 5.526H192.372L189.837 8.425V2.887H188.407V12H189.837Z"
+                fill="#C5C5C5" />
+              <path d="M52 13.3H194.218V13.95H52V13.3Z" fill="#C5C5C5" />
+              <path
+                d="M20.902 8.62V7.359H17.587V4.876H21.799V3.589H16.053V12H17.587V8.62H20.902ZM28.6829 8.763C28.6829 6.787 27.3309 5.357 25.4589 5.357C23.5739 5.357 22.2089 6.787 22.2089 8.763C22.2089 10.739 23.5739 12.169 25.4589 12.169C27.3309 12.169 28.6829 10.739 28.6829 8.763ZM23.7169 8.763C23.7169 7.463 24.4449 6.514 25.4589 6.514C26.4599 6.514 27.1749 7.463 27.1749 8.763C27.1749 10.063 26.4599 10.999 25.4589 10.999C24.4449 10.999 23.7169 10.063 23.7169 8.763ZM35.7206 12V7.762C35.7206 6.358 34.7586 5.357 33.5106 5.357C32.6136 5.357 31.8596 5.864 31.4306 6.475V5.526H30.0526V12H31.4826V7.359C31.8336 6.904 32.4446 6.54 33.0816 6.54C33.7836 6.54 34.2906 7.06 34.2906 7.866V12H35.7206ZM41.3165 11.974V10.817C41.0695 10.895 40.6535 10.973 40.2635 10.973C39.4965 10.973 39.1845 10.609 39.1845 10.011V6.683H41.2905V5.526H39.1845V3.953H37.7545V5.526H36.7795V6.683H37.7545V10.31C37.7545 11.493 38.5475 12.182 39.9775 12.182C40.4585 12.182 41.0175 12.078 41.3165 11.974ZM47.7998 10.505L46.7078 10.076C46.3958 10.687 45.8238 11.051 45.1998 11.051C44.2378 11.051 43.5488 10.271 43.4578 9.075H47.8128C47.8518 8.906 47.8778 8.529 47.8778 8.217C47.8778 6.527 46.7208 5.357 45.0828 5.357C43.2888 5.357 41.9758 6.826 41.9758 8.841C41.9758 10.791 43.2888 12.182 45.0958 12.182C46.3048 12.182 47.3448 11.545 47.7998 10.505ZM45.0828 6.449C45.8888 6.449 46.4348 7.086 46.4868 8.074H43.5098C43.7048 7.073 44.3158 6.449 45.0828 6.449Z"
+                fill="#3D3D3D" />
+              <circle cx="5.5" cy="8.5" r="5.5" fill="url(#paint0_linear_457_127)" />
+              <defs>
+                <linearGradient id="paint0_linear_457_127" x1="-2.20228" y1="0.335853" x2="13.8613" y2="0.410072" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#07A76F" />
+                  <stop offset="1" stop-color="#8ECA45" />
+                </linearGradient>
+              </defs>
+            </svg>
 
+          </div>
 
 
         </div>
 
         <div id="map_third" class="map_flyto"></div>
       </section>
-      <div class="line"></div>
+      <div class="line desktop"></div>
 
       <section class="text_section section">
         <div class="text_container section_container">
           <div class="paragraph">
-            <p fade>Si tratta di una fotografia che andrà ad arricchirsi nel tempo e che non può ancora catturare il diverso attivismo delle città nelle iniziative di riforestazione urbana. Tra cui vale la pena citare il progetto “10.000 nuovi alberi” appena realizzato da Padova, con un investimento importante e una pianificazione di lungo termine che potrà fare la differenza.</p>
+            <p fade>Si tratta di una fotografia che andrà ad arricchirsi nel tempo e che non può ancora catturare il diverso attivismo delle città nelle iniziative di riforestazione urbana. Tra cui vale la pena citare il progetto “10.000 nuovi
+              alberi” appena realizzato da Padova, con un investimento importante e una pianificazione di lungo termine che potrà fare la differenza.</p>
 
-            <p fade>Ma come a Padova, anche il ForestaMi di Milano che prevede tre milioni di nuovi alberi in tutta la città metropolitana potrà cambiare il volto della città. E ancora la piattaforma Forrest City per il crowdfunding a Prato, un progetto di forestazione urbana che coinvolge anche i cittadini, e i piani di Parma, Rimini e Mantova, aprono sempre di più a una diffusione di nuove giungle urbane. Specialmente se si riuscirà a tenere fede a quanto previsto nel Piano nazionale di ripresa e resilienza (PNRR).</p>
+            <p fade>Ma come a Padova, anche il ForestaMi di Milano che prevede tre milioni di nuovi alberi in tutta la città metropolitana potrà cambiare il volto della città. E ancora la piattaforma Forrest City per il crowdfunding a Prato, un
+              progetto di forestazione urbana che coinvolge anche i cittadini, e i piani di Parma, Rimini e Mantova, aprono sempre di più a una diffusione di nuove giungle urbane. Specialmente se si riuscirà a tenere fede a quanto previsto nel Piano
+              nazionale di ripresa e resilienza (PNRR).</p>
           </div>
         </div>
       </section>
 
+      <div class="line mobile"></div>
 
       <section id="number_illu" class="info_section section">
         <div class="info_container section_container">
           <div class="section_title_container">
             <img src="./images/content/info_first_icon.svg" alt="">
             <div class="section_title">
-              <h4>IL NUMERO DI ALBERI OGNI 100 ABITANTI  IN ALCUNI GRANDI CENTRI ITALIANI </h4>
+              <h4>IL NUMERO DI ALBERI OGNI 100 ABITANTI IN ALCUNI GRANDI CENTRI ITALIANI </h4>
             </div>
           </div>
           <div class="illustration_container">
@@ -407,99 +532,105 @@
       </section>
 
 
+      <div class="line desktop"></div>
+      <div class="header_section">
+        <div class="header_container">
+          <div class="line_left">
+            <span></span>
+          </div>
+          <div class="header_title">
+            <h3>PNRR: panacea di tutti i problemi?</h3>
+          </div>
+        </div>
+      </div>
       <div class="line"></div>
-        <div class="header_section">
-          <div class="header_container">
-            <div class="line_left">
-                <span></span>
-            </div>
-            <div class="header_title">
-              <h3>PNRR: panacea di tutti i problemi?</h3>
-            </div>
+
+
+      <section class="text_section section">
+        <div class="text_container section_container">
+          <div class="paragraph">
+
+            <span class="droptext">
+              <img src="./images/content/parte-4.svg" alt="">
+            </span>
+
+            <p><strong>Missione 2, Componente 4, Investimento 3.1.</strong> Questo è il percorso da seguire all’interno del PNRR, per trovare il piano di investimento per la “Tutela e valorizzazione del verde urbano ed extraurbano”. L’obiettivo
+              fissato dal Governo è la piantumazione di 6.6 milioni di alberi entro il 2024 (di cui almeno 1.650.000 entro il 2022) per 6.600 ettari di foreste urbane (pari a 9 mila campi da calcio), con una dotazione finanziaria di 330 milioni di
+              euro. Un piano certamente ambizioso: secondo gli ultimi dati ISTAT disponibili, nel 2019 gli interventi di forestazione urbana in Italia hanno interessato 1.100 ettari di terreno, un sesto di quanto previsto dal PNRR.</p>
+
+            <p>Non mancano però gli ostacoli. Primo fra tutti la difficoltà di approvvigionamento di un tale numero di alberi, che richiederà un’inedita collaborazione lungo tutta la catena di produzione in modo da rendere disponibile il materiale
+              vegetale richiesto. Anche qualora si avesse successo nel piantare un tale numero di alberi, servirà poi un cambio di passo nel loro mantenimento. </p>
           </div>
         </div>
-        <div class="line"></div>
+      </section>
+
+      <div class="line"></div>
 
 
-        <section class="text_section section">
-          <div class="text_container section_container">
-            <div class="paragraph">
-
-              <span class="droptext">
-                <img src="./images/content/parte-4.svg" alt="">
-              </span>
-
-              <p><strong>Missione 2, Componente 4, Investimento 3.1.</strong> Questo è il percorso da seguire all’interno del PNRR, per trovare il piano di investimento per la “Tutela e valorizzazione del verde urbano ed extraurbano”. L’obiettivo fissato dal Governo è la piantumazione di 6.6 milioni di alberi entro il 2024 (di cui almeno 1.650.000 entro il 2022) per 6.600 ettari di foreste urbane (pari a 9 mila campi da calcio), con una dotazione finanziaria di 330 milioni di euro. Un piano certamente ambizioso: secondo gli ultimi dati ISTAT disponibili, nel 2019 gli interventi di forestazione urbana in Italia hanno interessato 1.100 ettari di terreno, un sesto di quanto previsto dal PNRR.</p>
-
-              <p>Non mancano però gli ostacoli. Primo fra tutti la difficoltà di approvvigionamento di un tale numero di alberi, che richiederà un’inedita collaborazione lungo tutta la catena di produzione in modo da rendere disponibile il materiale vegetale richiesto. Anche qualora si avesse successo nel piantare un tale numero di alberi, servirà poi un cambio di passo nel loro mantenimento. </p>
+      <section id="third_illu" class="info_section section">
+        <div class="info_container section_container">
+          <div class="section_title_container">
+            <img src="./images/content/info_first_icon.svg" alt="">
+            <div class="section_title">
+              <h4>gli Interventi di riforestazione <br> urbana previsti dal PNR  </h4>
             </div>
           </div>
-        </section>
+          <div class="illustration_container">
+            <img class="desktop" src="./images/content/info_third.svg" alt="">
+            <img class="mobile" src="./images/content/info_third_mobile.svg" alt="">
 
-        <div class="line"></div>
-
-
-        <section id="third_illu" class="info_section section">
-          <div class="info_container section_container">
-            <div class="section_title_container">
-              <img src="./images/content/info_first_icon.svg" alt="">
-              <div class="section_title">
-                <h4>gli Interventi di riforestazione  <br> urbana previsti dal PNR </h4>
-              </div>
-            </div>
-            <div class="illustration_container">
-              <img class="desktop" src="./images/content/info_third.svg" alt="">
-              <img class="mobile" src="./images/content/info_third_mobile.svg" alt="">
-
-            </div>
-          </div>
-        </section>
-
-        <div class="line"> </div>
-
-
-        <section class="text_section section">
-          <div class="text_container section_container">
-            <div class="paragraph">
-              <p>Il PNRR sembra confermare questa tendenza: facendo i conti, non sembrano essere sufficienti i 50 euro messi a disposizione per ogni pianta. Questa cifra dovrebbe infatti coprire non solo i costi per il suo acquisto, ma anche quelli per il trasporto, la messa a dimora e la sua gestione e cura "per almeno i sette anni successivi alla realizzazione del rimboschimento".</p>
-
-              <p>Infine, tutto questo non basterà a creare degli ecosistemi sostenibili a meno di rivedere l’intera concezione del verde nelle nostre città. Gli alberi sono ancora troppo spesso considerati un arredo urbano, l’ultimo elemento da aggiungere alla fine di una pianificazione urbana. Dovrebbe accadere esattamente l’opposto, con un una visione ecosistemica del verde urbano e periurbano attorno a cui sviluppare la progettazione urbanistica. </p>
-            </div>
-          </div>
-        </section>
-
-
-    <div animate class="line"></div>
-
-    <section class="quote_section section">
-      <div class="quote_container section_container">
-
-        <div class="section_title_container">
-          <img src="./images/content/quote_icon.svg" alt="">
-          <div class="section_title">
-            <h4>Le parole di Francesco Ferrini</h4>
-            <p>Professore Arboricoltura / Università di Firenze</p>
           </div>
         </div>
+      </section>
 
-        <h2 class="last-quote">In Italia va molto di moda piantare e andarsene dopo  il taglio del nastro: bisognerebbe invece investire il doppio nella gestione della pianta rispetto al suo costo di messa a dimora</h2>
-      </div>
-    </section>
+      <div class="line"> </div>
 
-    <div class="line"></div>
 
-    <section class="credits">
-      <div class="credit_container">
-        <ul>
-          <li><strong>Coordinamento</strong> Luca Salvioli</li>
-          <li><strong>Contenuti</strong> Dalk (Damiano Bacci) e Alberto Guidi</li>
-          <li><strong>Design director:</strong> Laura Cattaneo</li>
-          <li><strong>Design:</strong> Dalk (Luca Gorini)</li>
-          <li><strong>Sviluppo:</strong> Matteo Sacchi</li>
-        </ul>
-      </div>
-    </section>
-  </main>
+      <section class="text_section section">
+        <div class="text_container section_container">
+          <div class="paragraph">
+            <p>Il PNRR sembra confermare questa tendenza: facendo i conti, non sembrano essere sufficienti i 50 euro messi a disposizione per ogni pianta. Questa cifra dovrebbe infatti coprire non solo i costi per il suo acquisto, ma anche quelli per
+              il trasporto, la messa a dimora e la sua gestione e cura "per almeno i sette anni successivi alla realizzazione del rimboschimento".</p>
+
+            <p>Infine, tutto questo non basterà a creare degli ecosistemi sostenibili a meno di rivedere l’intera concezione del verde nelle nostre città. Gli alberi sono ancora troppo spesso considerati un arredo urbano, l’ultimo elemento da
+              aggiungere alla fine di una pianificazione urbana. Dovrebbe accadere esattamente l’opposto, con un una visione ecosistemica del verde urbano e periurbano attorno a cui sviluppare la progettazione urbanistica. </p>
+          </div>
+        </div>
+      </section>
+
+
+      <div animate class="line"></div>
+
+      <section class="quote_section section">
+        <div class="quote_container section_container">
+
+          <div class="section_title_container">
+            <img src="./images/content/quote_icon.svg" alt="">
+            <div class="section_title">
+              <h4>Le parole di Francesco Ferrini</h4>
+              <p>Professore Arboricoltura / Università di Firenze</p>
+            </div>
+          </div>
+
+          <h2 class="last-quote">In Italia va molto di moda piantare e andarsene dopo il taglio del nastro: bisognerebbe invece investire il doppio nella gestione della pianta rispetto al suo costo di messa a dimora</h2>
+        </div>
+      </section>
+
+      <div class="line"></div>
+
+      <section class="credits">
+        <div class="credit_container">
+          <ul>
+            <li><strong>Coordinamento</strong> Luca Salvioli</li>
+            <li><strong>Contenuti</strong> Dalk (Damiano Bacci) e Alberto Guidi</li>
+            <li><strong>Design director:</strong> Laura Cattaneo</li>
+            <li><strong>Design:</strong> Dalk (Luca Gorini)</li>
+            <li><strong>Illustrazione:</strong> Giorgio de Marinis</li>
+            <li><strong>Sviluppo web + cartografie:</strong> Matteo Sacchi</li>
+          </ul>
+        </div>
+      </section>
+    </main>
 
     <footer>
       <div class="footer_container">
@@ -508,4 +639,5 @@
     </footer>
 
   </body>
+
 </html>
