@@ -99,6 +99,7 @@ strong{
   @include gradient_text_animation;
   h2{
     font-size: $size_title;
+    line-height: 62px;
     margin-bottom: $spacing*2;
     font-family: "serif-xbold"
   }
@@ -368,22 +369,13 @@ strong{
   border-right:1px solid $green;
 }
 
-#temperatura_super{
+#temperatura_super, #copertura{
   position: absolute;
   text-transform: uppercase;
   letter-spacing: 1px;
   left: $spacing;
   top:$spacing;
-  padding: $spacing/2 $spacing;
-  background: $white;
-  border: 1px solid $green;
-  border-radius: 100px;
-  color:$green;
   transition: .1s ease;
-  &:hover, &.active{
-    @include gradient;
-    color: $white;
-  }
 }
 
 
@@ -406,6 +398,9 @@ strong{
   margin-top: $spacing*3;
   font-size: 18px;
   line-height: 1.4;
+  img{
+    margin-top: $spacing*2;
+  }
 }
 .map_info{
   padding: $spacing;
@@ -413,8 +408,13 @@ strong{
   color: #C5C5C5;
   height: 100%;
   display: flex;
-  align-items: flex-end;
+  // align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
   line-height: 1.4;
+  img, svg{
+    margin-bottom: $spacing;
+  }
 }
 
 
@@ -446,7 +446,6 @@ strong{
 
 
 .map_navigation{
-  padding: $spacing*3 $spacing;
   padding-top: 0;
   display: flex;
   flex-direction: column;
@@ -460,9 +459,7 @@ strong{
   display: flex;
   align-items: center;
   border-bottom: 1px solid $green;
-  margin: $spacing 0;
-  margin-top: $spacing;
-  padding-bottom: $spacing;
+  padding: $spacing;
   .tab_num{
     width:35px;
     height: 35px;
@@ -484,8 +481,11 @@ strong{
     max-width: 90%;
     margin-left: 10%;
     border-left: 1px solid $green;
-    padding-left: $spacing;
+    padding: $spacing;
     line-height: 1.4;
+    a{
+      text-decoration: underline;
+    }
   }
 }
 
@@ -497,7 +497,7 @@ strong{
 .tab{
   display: flex;
   justify-content: center;
-  padding: $spacing 0;
+  padding: $spacing;
   flex-wrap: wrap;
   border-bottom: 1px solid $green;
 }
@@ -684,7 +684,7 @@ strong{
 
   #first_illu .illustration_container img{
     width:100%;
-    max-width: 400px;
+    max-width: 290px;
     margin: 0 auto;
   }
   #second_illu .illustration_container{
@@ -741,6 +741,21 @@ strong{
   }
   #map_third{
     height: 60vh;
+  }
+
+  #first_map{
+    .map_heading{
+      border-top: 1px solid $green;
+      padding: $spacing 0;
+    }
+    .map_description{
+      padding: 0 $spacing/2;
+      margin-top: $spacing;
+      img{
+        margin-top: $spacing;
+        margin-bottom: $spacing/2;
+      }
+    }
   }
 
 

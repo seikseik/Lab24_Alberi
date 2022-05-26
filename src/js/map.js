@@ -9,6 +9,21 @@ if(window.innerWidth < 900){
   mobile = true;
 }
 
+let zoom_map_one;
+let zoom_map_two;
+let zoom_map_three;
+
+if(mobile){
+  zoom_map_one = 6.5;
+  zoom_map_two = 15;
+  zoom_map_three = 15;
+}else{
+  zoom_map_one = 3.3;
+  zoom_map_two = 11.2;
+  zoom_map_three = 11.3;
+}
+
+
 
 // first map
 var map = new mapboxgl.Map({
@@ -16,10 +31,11 @@ var map = new mapboxgl.Map({
   style: 'mapbox://styles/lucagorini/cl2t3c0k1000314npzj6k6lgj',
   accessToken: 'pk.eyJ1IjoibHVjYWdvcmluaSIsImEiOiJja28yd2tzdjQxM3NqMnFwZ3BremZ2Y3hrIn0.TOK_D8r2LULbVb-3ULVf8Q',
   center: [8.533621, 47.119],
-  zoom: 3.3
+  zoom: zoom_map_one,
 });
 
 map.scrollZoom.disable();
+map.doubleClickZoom.disable();
 
 
 
@@ -39,18 +55,18 @@ map.on("load", function() {
         'property': 'VALUE',
         'type': 'exponential',
         'stops': [
-          [0, 'rgb(217, 128, 31)'],
-          [1, 'rgb(199, 134, 30)'],
-          [2, 'rgb(182, 140, 30)'],
-          [3, 'rgb(147, 153, 29)'],
-          [4, 'rgb(112, 166, 28)'],
-          [5, 'rgb(77, 179, 27)'],
-          [6, 'rgb(43, 192, 27)']
+          [0, 'rgb(255, 0, 0)'],
+          [1, 'rgb(255, 168, 168)'],
+          [2, 'rgb(255, 199, 84)'],
+          [3, 'rgb(255, 255, 0)'],
+          [4, 'rgb(209, 255, 84)'],
+          [5, 'rgb(100, 168, 0)'],
+          [6, 'rgb(5, 107, 71)']
         ]
       },
       'circle-radius': 6.5,
-      'circle-stroke-width': 1,
-      'circle-stroke-color': '#ffffff'
+      'circle-stroke-width': 0.4,
+      'circle-stroke-color': 'black'
     }
   }, "country-label");
 
@@ -84,21 +100,22 @@ var map_due = new mapboxgl.Map({
   style: 'mapbox://styles/lucagorini/cl2t3c0k1000314npzj6k6lgj',
   accessToken: 'pk.eyJ1IjoibHVjYWdvcmluaSIsImEiOiJja28yd2tzdjQxM3NqMnFwZ3BremZ2Y3hrIn0.TOK_D8r2LULbVb-3ULVf8Q',
   center: [9.17, 45.47],
-  zoom: 11.2
+  zoom: zoom_map_two
 });
 
 map_due.scrollZoom.disable();
+map_due.doubleClickZoom.disable();
 
 map_due.on('load', () => {
 
   map_due.addSource('arborea', {
     'type': 'raster',
-    'url': 'mapbox://lucagorini.8ln15ca6'
+    'url': 'mapbox://lucagorini.2s9popqr'
   });
 
   map_due.addSource('temperatura', {
     'type': 'raster',
-    'url': 'mapbox://lucagorini.3eez86i1'
+    'url': 'mapbox://lucagorini.3f6bzd16'
   });
 
 
@@ -119,7 +136,7 @@ map_due.on('idle', () => {
   if (!map_due.getLayer('copertura') || !map_due.getLayer('temperatura_super')) {
     return;
   }
-  const toggleableLayerIds = ['temperatura_super'];
+  const toggleableLayerIds = ['copertura'];
 
   for (const id of toggleableLayerIds) {
     if (document.getElementById(id)) {
@@ -129,7 +146,8 @@ map_due.on('idle', () => {
     const link = document.createElement('a');
     link.id = id;
     link.href = '#';
-    link.textContent = "temperatura";
+    link.textContent = "";
+    link.innerHTML += "<img src='./images/content/btn_alberi_on.svg' />"
     link.className = 'active';
 
     link.onclick = function(e) {
@@ -148,8 +166,10 @@ map_due.on('idle', () => {
       if (visibility === 'visible' || visibility == undefined) {
         map_due.setLayoutProperty(clickedLayer, 'visibility', 'none');
         this.className = '';
+        this.querySelector("img").src = './images/content/btn_alberi_off.svg';
       } else {
         this.className = 'active';
+        this.querySelector("img").src = './images/content/btn_alberi_on.svg';
         map_due.setLayoutProperty(
           clickedLayer,
           'visibility',
@@ -201,13 +221,12 @@ var map_tre = new mapboxgl.Map({
   style: 'mapbox://styles/lucagorini/cl2t3c0k1000314npzj6k6lgj',
   accessToken: 'pk.eyJ1IjoibHVjYWdvcmluaSIsImEiOiJja28yd2tzdjQxM3NqMnFwZ3BremZ2Y3hrIn0.TOK_D8r2LULbVb-3ULVf8Q',
   center: [12.496, 41.90278],
-  zoom: 11.3
+  zoom: zoom_map_three
 });
 
-map_tre.scrollZoom.disable();
-
 
 map_tre.scrollZoom.disable();
+map_tre.doubleClickZoom.disable();
 
 map_tre.on('load', () => {
 
