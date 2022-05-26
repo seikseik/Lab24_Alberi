@@ -14,9 +14,9 @@ let zoom_map_two;
 let zoom_map_three;
 
 if(mobile){
-  zoom_map_one = 6.5;
-  zoom_map_two = 15;
-  zoom_map_three = 15;
+  zoom_map_one = 2.5;
+  zoom_map_two = 10.2;
+  zoom_map_three = 10;
 }else{
   zoom_map_one = 3.3;
   zoom_map_two = 11.2;
@@ -220,7 +220,7 @@ var map_tre = new mapboxgl.Map({
   container: 'map_third',
   style: 'mapbox://styles/lucagorini/cl2t3c0k1000314npzj6k6lgj',
   accessToken: 'pk.eyJ1IjoibHVjYWdvcmluaSIsImEiOiJja28yd2tzdjQxM3NqMnFwZ3BremZ2Y3hrIn0.TOK_D8r2LULbVb-3ULVf8Q',
-  center: [12.496, 41.90278],
+  center: [7.6868565, 45.070312],
   zoom: zoom_map_three
 });
 
@@ -243,7 +243,7 @@ map_tre.on('load', () => {
       'circle-color': "green",
       'circle-radius': 1.5,
     }
-  }, "country-label");
+  }, "settlement-subdivision-label");
 
 
   map_tre.addSource('parchi', {
@@ -259,7 +259,7 @@ map_tre.on('load', () => {
     'line-color': 'green',
     'line-width': 1
     }
-  }, "country-label");
+  }, "settlement-subdivision-label");
 
   map_tre.addControl(new mapboxgl.NavigationControl());
 
