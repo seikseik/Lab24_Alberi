@@ -96,7 +96,7 @@ strong{
 }
 
 .hero_heading_title_container{
-  @include gradient_text_animation;
+  @include gradient_text;
   h2{
     font-size: $size_title;
     line-height: 62px;
@@ -383,6 +383,8 @@ strong{
 .map_heading{
   padding: $spacing;
   display: flex;
+  align-items: center;
+  
   img{margin-right: 10px;}
   @include border_tb;
   border-top: none;
@@ -642,6 +644,10 @@ strong{
       width:100%;
     }
     .quote_container{
+      .last-quote{
+        font-size: 28px;
+        line-height: 1;
+      }
       h2{
         font-size: 40px;
         padding: $spacing/2 0;
@@ -723,7 +729,7 @@ strong{
     }
     .col_right_map{
       width:100%;
-      height: 100vh;
+      height: 100vw;
     }
 
     .map_navigation{
@@ -740,7 +746,7 @@ strong{
     }
   }
   #map_third{
-    height: 60vh;
+    height: 100vw;
   }
 
   #first_map{

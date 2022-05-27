@@ -348,10 +348,10 @@ strong {
 }
 
 .hero_heading_title_container {
-  background: linear-gradient(232deg, #07a76f, #8eca45);
-  background-size: 400% 400%;
-  -webkit-animation: gradientAnimation 7s ease infinite;
-  animation: gradientAnimation 7s ease infinite;
+  background-color: black;
+  background: linear-gradient(90.26deg, #07A76F -20.04%, #8ECA45 125.32%);
+  background-size: 100%;
+  background-repeat: repeat;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
@@ -677,6 +677,9 @@ strong {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-top: 1px solid #21AE68;
   border-bottom: 1px solid #21AE68;
   border-top: none;
@@ -1000,6 +1003,10 @@ strong {
   .quote_section .section_title_container {
     width: 100%;
   }
+  .quote_section .quote_container .last-quote {
+    font-size: 28px;
+    line-height: 1;
+  }
   .quote_section .quote_container h2 {
     font-size: 40px;
     padding: 7.5px 0;
@@ -1082,7 +1089,7 @@ strong {
   }
   .map_section .col_right_map {
     width: 100%;
-    height: 100vh;
+    height: 100vw;
   }
   .map_section .map_navigation {
     width: 100%;
@@ -1098,7 +1105,7 @@ strong {
   }
 
   #map_third {
-    height: 60vh;
+    height: 100vw;
   }
 
   #first_map .map_heading {

@@ -41,18 +41,3 @@ fadeUp.forEach((el, i) => {
     once: true,
   });
 });
-
-
-
-// let h = document.querySelector(".hero").offsetHeight;
-// let arrow = document.querySelector(".scroll");
-// arrow.addEventListener("click", function(){
-//   gsap.to(window, {duration: 1, scrollTo: h});
-// });
-
-
-let scrolltop = document.querySelector(".scrolltop");
-scrolltop.addEventListener("click", function(){
-  console.log("ciao")
-  gsap.to(window, {duration: 1, scrollTo: 0});
-});
